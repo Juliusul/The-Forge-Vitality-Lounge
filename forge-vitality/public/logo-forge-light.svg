@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <defs>
+    <linearGradient id="arcGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fafaf8"/>
+      <stop offset="50%" stop-color="#d4c9a8"/>
+      <stop offset="100%" stop-color="#b8a882"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Arc symbol -->
+  <path
+    d="M 8 44 Q 30 10 52 44"
+    stroke="url(#arcGradLight)"
+    stroke-width="2.2"
+    fill="none"
+    stroke-linecap="round"
+  />
+
+  <!-- Text: THE FORGE -->
+  <text
+    x="64"
+    y="28"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13"
+    font-weight="300"
+    letter-spacing="4"
+    fill="#fafaf8"
+  >THE FORGE</text>
+
+  <!-- Sub-text: BY VITALITY LOUNGE -->
+  <text
+    x="64"
+    y="43"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="7.5"
+    font-weight="300"
+    letter-spacing="2.5"
+    fill="#b8a882"
+  >BY VITALITY LOUNGE</text>
+</svg>

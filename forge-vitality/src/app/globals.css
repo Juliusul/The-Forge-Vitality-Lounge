@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --forge-black: #0f0f0d;
+    --forge-charcoal: #1a1a17;
+    --forge-dark: #242420;
+    --forge-mid: #3a3a35;
+    --forge-warm-grey: #8a8a82;
+    --forge-light-grey: #c8c8bf;
+    --forge-off-white: #f4f3ef;
+    --forge-white: #fafaf8;
+    --forge-gold: #b8a882;
+    --forge-gold-light: #d4c9a8;
+    --forge-gold-muted: #a09070;
+  }
+}
+
+@theme inline {
+  --color-forge-black: var(--forge-black);
+  --color-forge-charcoal: var(--forge-charcoal);
+  --color-forge-dark: var(--forge-dark);
+  --color-forge-mid: var(--forge-mid);
+  --color-forge-warm-grey: var(--forge-warm-grey);
+  --color-forge-light-grey: var(--forge-light-grey);
+  --color-forge-off-white: var(--forge-off-white);
+  --color-forge-white: var(--forge-white);
+  --color-forge-gold: var(--forge-gold);
+  --color-forge-gold-light: var(--forge-gold-light);
+  --color-forge-gold-muted: var(--forge-gold-muted);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--forge-white);
+  color: var(--forge-black);
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--forge-gold);
+  color: var(--forge-black);
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.025em;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.font-sans-forge {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.tracking-widest-forge {
+  letter-spacing: 0.2em;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--forge-off-white); }
+::-webkit-scrollbar-thumb { background: var(--forge-light-grey); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--forge-warm-grey); }
+
+section { position: relative; }
+
+.gold-line::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--forge-gold);
+  margin-top: 1.5rem;
+}
+
+.gold-line-center::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--forge-gold);
+  margin: 1.5rem auto 0;
+}
