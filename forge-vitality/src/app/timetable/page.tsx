@@ -54,23 +54,23 @@ export default function TimetablePage() {
     <>
       <PageHero
         label="Kursplan"
-        title={<>Deine Woche.<br /><em className="text-[#b8a882]">Strukturiert.</em></>}
+        title={<>Deine Woche.<br /><span className="text-[#c19255]">Strukturiert.</span></>}
         subtitle="Alle Kurse auf einen Blick. Buche deinen Platz rechtzeitig — Kursgrößen sind bewusst klein gehalten."
       />
 
-      <section className="bg-[#f4f3ef] py-24 lg:py-36">
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+      <section className="bg-[#0d0d0b] py-24 lg:py-36">
+        <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <SectionLabel>Wochenübersicht</SectionLabel>
 
           {/* Timetable grid */}
           <div className="overflow-x-auto">
             <div className="min-w-[800px]">
               {/* Day headers */}
-              <div className="grid grid-cols-6 gap-px bg-[#c8c8bf]/40 mb-px">
+              <div className="grid grid-cols-6 gap-px bg-[#c19255]/10 mb-px">
                 {days.map((day) => (
-                  <div key={day} className="bg-[#0f0f0d] px-4 py-4">
+                  <div key={day} className="bg-[#1a1a16] px-4 py-4 border-b border-[#c19255]/20">
                     <p
-                      className="text-[#fafaf8] text-[10px] tracking-[0.18em] uppercase font-light"
+                      className="text-[#c19255] text-[10px] tracking-[0.2em] uppercase font-semibold"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       {day}
@@ -80,28 +80,33 @@ export default function TimetablePage() {
               </div>
 
               {/* Schedule columns */}
-              <div className="grid grid-cols-6 gap-px bg-[#c8c8bf]/40">
+              <div className="grid grid-cols-6 gap-px bg-[#c19255]/8">
                 {days.map((day) => (
                   <div key={day} className="flex flex-col gap-px">
                     {(schedule[day] || []).map((slot, i) => (
                       <div
                         key={i}
-                        className="bg-[#fafaf8] p-4 hover:bg-[#f4f3ef] transition-colors"
+                        className="bg-[#181816] p-4 hover:bg-[#1e1e1c] transition-colors group"
                       >
                         <p
-                          className="text-[#b8a882] text-[10px] tracking-[0.14em] font-light mb-1"
+                          className="text-[#c19255] text-[10px] tracking-[0.14em] font-semibold mb-1"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
                           {slot.time}
                         </p>
                         <p
-                          className="text-[#0f0f0d] text-[12px] font-light leading-tight mb-1"
-                          style={{ fontFamily: "'Playfair Display', serif", fontSize: "14px" }}
+                          className="text-[#f8f7f2] uppercase mb-1 leading-tight group-hover:text-[#c19255] transition-colors"
+                          style={{
+                            fontFamily: "'Barlow Condensed', sans-serif",
+                            fontWeight: 700,
+                            fontSize: "13px",
+                            letterSpacing: "0.03em",
+                          }}
                         >
                           {slot.name}
                         </p>
                         <p
-                          className="text-[#8a8a82] text-[10px] font-light"
+                          className="text-[#5a5a55] text-[10px] font-light"
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
                           {slot.coach} · {slot.level}
@@ -116,7 +121,7 @@ export default function TimetablePage() {
 
           {/* Note */}
           <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <p className="text-[#8a8a82] text-[11px] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <p className="text-[#5a5a55] text-[11px] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
               Kursänderungen werden 24h im Voraus via App kommuniziert. Max. 8–12 Personen pro Kurs.
             </p>
             <Button href="/contact" variant="outline">

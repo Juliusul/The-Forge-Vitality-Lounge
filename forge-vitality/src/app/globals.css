@@ -1,33 +1,42 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @layer base {
   :root {
-    --forge-black: #0f0f0d;
-    --forge-charcoal: #1a1a17;
-    --forge-dark: #242420;
-    --forge-mid: #3a3a35;
-    --forge-warm-grey: #8a8a82;
-    --forge-light-grey: #c8c8bf;
-    --forge-off-white: #f4f3ef;
-    --forge-white: #fafaf8;
-    --forge-gold: #b8a882;
-    --forge-gold-light: #d4c9a8;
-    --forge-gold-muted: #a09070;
+    /* Athletic Performance Palette */
+    --forge-black:      #0d0d0b;
+    --forge-graphite:   #181816;
+    --forge-charcoal:   #222220;
+    --forge-dark:       #2d2d2a;
+    --forge-mid:        #3e3e3a;
+    --forge-steel:      #5a5a55;
+    --forge-warm-grey:  #8a8a82;
+    --forge-light-grey: #b8b8b0;
+    --forge-off-white:  #f0efe9;
+    --forge-white:      #f8f7f2;
+    --forge-pure:       #ffffff;
+    /* Gold — from logo gradient */
+    --forge-gold:       #c19255;
+    --forge-gold-light: #d4ab74;
+    --forge-gold-dark:  #a07840;
+    /* Accent */
+    --forge-accent:     #c19255;
   }
 }
 
 @theme inline {
-  --color-forge-black: var(--forge-black);
-  --color-forge-charcoal: var(--forge-charcoal);
-  --color-forge-dark: var(--forge-dark);
-  --color-forge-mid: var(--forge-mid);
-  --color-forge-warm-grey: var(--forge-warm-grey);
+  --color-forge-black:      var(--forge-black);
+  --color-forge-graphite:   var(--forge-graphite);
+  --color-forge-charcoal:   var(--forge-charcoal);
+  --color-forge-dark:       var(--forge-dark);
+  --color-forge-mid:        var(--forge-mid);
+  --color-forge-steel:      var(--forge-steel);
+  --color-forge-warm-grey:  var(--forge-warm-grey);
   --color-forge-light-grey: var(--forge-light-grey);
-  --color-forge-off-white: var(--forge-off-white);
-  --color-forge-white: var(--forge-white);
-  --color-forge-gold: var(--forge-gold);
+  --color-forge-off-white:  var(--forge-off-white);
+  --color-forge-white:      var(--forge-white);
+  --color-forge-gold:       var(--forge-gold);
   --color-forge-gold-light: var(--forge-gold-light);
-  --color-forge-gold-muted: var(--forge-gold-muted);
+  --color-forge-gold-dark:  var(--forge-gold-dark);
 }
 
 html {
@@ -41,7 +50,7 @@ body {
   color: var(--forge-black);
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
   font-weight: 300;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.005em;
 }
 
 ::selection {
@@ -49,48 +58,63 @@ body {
   color: var(--forge-black);
 }
 
+/* Typography Scale */
 .font-display {
-  font-family: 'Playfair Display', Georgia, serif;
-  letter-spacing: -0.025em;
+  font-family: 'Barlow Condensed', 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.font-display-regular {
+  font-family: 'Barlow Condensed', 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
 }
 
 .font-editorial {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
   letter-spacing: -0.01em;
 }
 
-.font-sans-forge {
+.font-ui {
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 300;
 }
 
-.tracking-widest-forge {
+/* Athletic label */
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
   letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--forge-gold);
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--forge-off-white); }
-::-webkit-scrollbar-thumb { background: var(--forge-light-grey); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--forge-warm-grey); }
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--forge-graphite); }
+::-webkit-scrollbar-thumb { background: var(--forge-gold-dark); }
+::-webkit-scrollbar-thumb:hover { background: var(--forge-gold); }
 
 section { position: relative; }
 
-.gold-line::after {
-  content: '';
+/* Gold accent line */
+.gold-bar {
   display: block;
-  width: 40px;
-  height: 1px;
+  width: 3px;
+  height: 40px;
   background: var(--forge-gold);
-  margin-top: 1.5rem;
 }
 
-.gold-line-center::after {
-  content: '';
+.gold-line {
   display: block;
-  width: 40px;
-  height: 1px;
+  width: 48px;
+  height: 2px;
   background: var(--forge-gold);
-  margin: 1.5rem auto 0;
+  margin-bottom: 1.5rem;
 }

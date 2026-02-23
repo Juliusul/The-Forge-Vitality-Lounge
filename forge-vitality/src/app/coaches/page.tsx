@@ -67,70 +67,52 @@ export default function CoachesPage() {
     <>
       <PageHero
         label="Das Team"
-        title={<>Kompetenz,<br /><em className="text-[#b8a882]">kein Marketingbegriff.</em></>}
+        title={<>Kompetenz,<br /><span className="text-[#c19255]">kein Marketingbegriff.</span></>}
         subtitle="Unsere Coaches kommen aus Sportwissenschaft, Physiotherapie und Leistungssport — nicht aus dem Marketing."
       />
 
-      <section className="bg-[#f4f3ef] py-24 lg:py-36">
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
-          <div className="flex flex-col gap-px bg-[#c8c8bf]/30">
+      <section className="bg-[#0d0d0b] py-24 lg:py-36">
+        <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
+          <div className="flex flex-col gap-px bg-[#c19255]/8">
             {coaches.map((coach, i) => (
-              <div
-                key={coach.name}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-px ${i % 2 === 0 ? "bg-[#c8c8bf]/30" : "bg-[#c8c8bf]/30"}`}
-              >
-                {/* Left: avatar + name */}
-                <div className={`lg:col-span-4 p-10 lg:p-16 ${i % 2 === 1 ? "bg-[#0f0f0d]" : "bg-[#fafaf8]"}`}>
-                  <div
-                    className={`w-20 h-20 flex items-center justify-center border mb-8 ${
-                      i % 2 === 1 ? "border-[#b8a882]/30" : "border-[#c8c8bf]"
-                    }`}
-                  >
+              <div key={coach.name} className="grid grid-cols-1 lg:grid-cols-12 gap-px bg-[#c19255]/8">
+                {/* Left */}
+                <div className={`lg:col-span-4 p-10 lg:p-14 ${i % 2 === 0 ? "bg-[#181816]" : "bg-[#111110]"} relative overflow-hidden`}>
+                  <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-[#c19255]/40 to-transparent" />
+                  <div className="w-16 h-16 flex items-center justify-center border border-[#c19255]/25 mb-8">
                     <span
-                      className={`text-2xl font-light ${i % 2 === 1 ? "text-[#b8a882]" : "text-[#b8a882]"}`}
-                      style={{ fontFamily: "'Playfair Display', serif" }}
+                      className="text-[#c19255] font-semibold"
+                      style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.1rem", letterSpacing: "0.1em" }}
                     >
                       {coach.initials}
                     </span>
                   </div>
                   <h2
-                    className={`text-2xl font-light mb-2 tracking-tight ${i % 2 === 1 ? "text-[#fafaf8]" : "text-[#0f0f0d]"}`}
-                    style={{ fontFamily: "'Playfair Display', serif" }}
+                    className="text-[#f8f7f2] uppercase mb-2"
+                    style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.5rem", letterSpacing: "0.04em" }}
                   >
                     {coach.name}
                   </h2>
-                  <p
-                    className="text-[#b8a882] text-[10px] tracking-[0.16em] uppercase font-light mb-6"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
+                  <p className="text-[#c19255] text-[10px] tracking-[0.18em] uppercase font-semibold mb-6" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {coach.role}
                   </p>
-                  <div className="h-px w-8 bg-[#b8a882]/40 mb-6" />
-                  <p
-                    className={`text-[11px] tracking-wide font-light ${i % 2 === 1 ? "text-[#8a8a82]" : "text-[#8a8a82]"}`}
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
+                  <div className="h-px w-8 bg-[#c19255]/30 mb-5" />
+                  <p className="text-[#5a5a55] text-[11px] tracking-wide font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {coach.focus}
                   </p>
                 </div>
 
-                {/* Right: bio + credentials */}
-                <div className={`lg:col-span-8 p-10 lg:p-16 ${i % 2 === 1 ? "bg-[#1a1a17]" : "bg-[#f4f3ef]"}`}>
-                  <p
-                    className={`text-[13px] leading-[1.9] font-light mb-10 max-w-xl ${i % 2 === 1 ? "text-[#c8c8bf]" : "text-[#3a3a35]"}`}
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
+                {/* Right */}
+                <div className={`lg:col-span-8 p-10 lg:p-14 ${i % 2 === 0 ? "bg-[#111110]" : "bg-[#181816]"}`}>
+                  <p className="text-[#8a8a82] text-[13px] leading-[1.85] font-light mb-10 max-w-xl" style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}>
                     {coach.bio}
                   </p>
                   <SectionLabel>Qualifikationen</SectionLabel>
                   <ul className="flex flex-col gap-3">
                     {coach.credentials.map((c) => (
-                      <li key={c} className="flex items-start gap-3">
-                        <div className="w-px h-3.5 bg-[#b8a882] mt-1 flex-shrink-0" />
-                        <span
-                          className={`text-[12px] font-light ${i % 2 === 1 ? "text-[#8a8a82]" : "text-[#8a8a82]"}`}
-                          style={{ fontFamily: "'Inter', sans-serif" }}
-                        >
+                      <li key={c} className="flex items-center gap-3">
+                        <div className="w-1 h-1 bg-[#c19255] flex-shrink-0 rounded-full" />
+                        <span className="text-[12px] font-light text-[#8a8a82]" style={{ fontFamily: "'Inter', sans-serif" }}>
                           {c}
                         </span>
                       </li>

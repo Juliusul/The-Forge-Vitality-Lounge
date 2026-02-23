@@ -25,25 +25,26 @@ const pillars = [
 
 export default function TrustSection() {
   return (
-    <section className="bg-[#fafaf8] py-28 lg:py-40">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+    <section className="bg-[#111110] py-24 lg:py-36">
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           {/* Left text block */}
           <div className="lg:col-span-4 lg:sticky lg:top-32">
             <SectionLabel>Warum The Forge</SectionLabel>
             <h2
-              className="text-[#0f0f0d] text-[clamp(2rem,4vw,3.8rem)] font-light leading-[1.0] tracking-[-0.02em] mb-8"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              className="text-[#f8f7f2] uppercase leading-[0.9] tracking-[-0.01em] mb-8"
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 800,
+                fontSize: "clamp(2.8rem, 5vw, 5rem)",
+              }}
             >
-              Vertrauen
-              <br />
-              entsteht durch
-              <br />
-              <em className="text-[#b8a882]">Substanz.</em>
+              Vertrauen durch{" "}
+              <span className="text-[#c19255]">Substanz.</span>
             </h2>
             <p
-              className="text-[#8a8a82] text-[13px] leading-[1.9] font-light"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#8a8a82] text-[13px] leading-[1.85] font-light"
+              style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
             >
               The Forge ist nicht für jeden. Es ist für Menschen, die in ihre
               Gesundheit investieren — mit demselben Anspruch, den sie an alles
@@ -51,16 +52,20 @@ export default function TrustSection() {
             </p>
 
             {/* Physiotherapy badge */}
-            <div className="mt-10 border border-[#b8a882]/30 p-6 inline-block">
+            <div className="mt-10 border border-[#c19255]/25 p-6 inline-block">
               <p
-                className="text-[#b8a882] text-[9px] tracking-[0.22em] uppercase mb-3"
+                className="text-[#c19255] text-[9px] tracking-[0.22em] uppercase mb-2 font-semibold"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Partner im Haus
               </p>
               <p
-                className="text-[#0f0f0d] text-[15px] font-light"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="text-[#f8f7f2] text-[15px] uppercase tracking-wider"
+                style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
+                }}
               >
                 Physiotherapie
               </p>
@@ -74,26 +79,41 @@ export default function TrustSection() {
           </div>
 
           {/* Right pillars */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#e8e7e3]">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#c19255]/10">
             {pillars.map((p) => (
               <div
                 key={p.number}
-                className="bg-[#fafaf8] p-8 hover:bg-[#f4f3ef] transition-colors duration-300 group"
+                className="bg-[#181816] p-8 hover:bg-[#1e1e1c] transition-colors duration-300 group"
               >
+                {/* Number */}
                 <p
-                  className="text-[#b8a882]/40 text-4xl font-light mb-6 group-hover:text-[#b8a882]/60 transition-colors"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="text-[#c19255]/30 mb-5 group-hover:text-[#c19255]/50 transition-colors"
+                  style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontWeight: 800,
+                    fontSize: "2.5rem",
+                    letterSpacing: "-0.02em",
+                  }}
                 >
                   {p.number}
                 </p>
+
+                {/* Gold line */}
+                <div className="w-8 h-px bg-[#c19255]/40 mb-5 group-hover:w-12 group-hover:bg-[#c19255]/70 transition-all duration-300" />
+
                 <h3
-                  className="text-[#0f0f0d] text-lg font-light mb-3 tracking-tight"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="text-[#f8f7f2] uppercase mb-3 tracking-wide"
+                  style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontWeight: 700,
+                    fontSize: "1.1rem",
+                    letterSpacing: "0.04em",
+                  }}
                 >
                   {p.title}
                 </h3>
                 <p
-                  className="text-[#8a8a82] text-[12px] leading-[1.9] font-light"
+                  className="text-[#8a8a82] text-[12px] leading-[1.85] font-light"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {p.body}

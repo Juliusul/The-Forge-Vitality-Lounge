@@ -11,12 +11,12 @@ export default function ContactPage() {
     <>
       <PageHero
         label="Kontakt"
-        title={<>Komm vorbei.<br /><em className="text-[#b8a882]">Wir freuen uns.</em></>}
+        title={<>Komm vorbei.<br /><span className="text-[#c19255]">Wir freuen uns.</span></>}
         subtitle="Kein Druck, keine Verpflichtung beim ersten Besuch. Überzeug dich selbst."
       />
 
-      <section className="bg-[#f4f3ef] py-24 lg:py-36">
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+      <section className="bg-[#0d0d0b] py-24 lg:py-36">
+        <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
 
             {/* Contact info */}
@@ -25,10 +25,10 @@ export default function ContactPage() {
 
               <div className="flex flex-col gap-8">
                 <div>
-                  <p className="text-[#b8a882] text-[10px] tracking-[0.2em] uppercase font-light mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <p className="text-[#c19255] text-[10px] tracking-[0.2em] uppercase font-semibold mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Adresse
                   </p>
-                  <address className="not-italic text-[#0f0f0d] text-sm font-light leading-relaxed" style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px" }}>
+                  <address className="not-italic text-[#f8f7f2] font-light leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px" }}>
                     Musterstraße 1<br />
                     33175 Bad Lippspringe<br />
                     Deutschland
@@ -36,25 +36,25 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <p className="text-[#b8a882] text-[10px] tracking-[0.2em] uppercase font-light mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <p className="text-[#c19255] text-[10px] tracking-[0.2em] uppercase font-semibold mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Telefon
                   </p>
-                  <a href="tel:+4952529999999" className="text-[#0f0f0d] hover:text-[#b8a882] transition-colors font-light" style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px" }}>
+                  <a href="tel:+4952529999999" className="text-[#f8f7f2] hover:text-[#c19255] transition-colors font-light" style={{ fontFamily: "'Inter', sans-serif", fontSize: "18px" }}>
                     +49 5252 999 999
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-[#b8a882] text-[10px] tracking-[0.2em] uppercase font-light mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <p className="text-[#c19255] text-[10px] tracking-[0.2em] uppercase font-semibold mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
                     E-Mail
                   </p>
-                  <a href="mailto:info@theforge-vitality.de" className="text-[#0f0f0d] hover:text-[#b8a882] transition-colors font-light" style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px" }}>
+                  <a href="mailto:info@theforge-vitality.de" className="text-[#f8f7f2] hover:text-[#c19255] transition-colors font-light" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px" }}>
                     info@theforge-vitality.de
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-[#b8a882] text-[10px] tracking-[0.2em] uppercase font-light mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <p className="text-[#c19255] text-[10px] tracking-[0.2em] uppercase font-semibold mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Öffnungszeiten
                   </p>
                   <div className="flex flex-col gap-2">
@@ -63,17 +63,17 @@ export default function ContactPage() {
                       { day: "Sa", hours: "07:00 – 20:00" },
                       { day: "So", hours: "08:00 – 18:00" },
                     ].map((h) => (
-                      <div key={h.day} className="flex justify-between">
+                      <div key={h.day} className="flex justify-between border-b border-[#c19255]/8 pb-2">
                         <span className="text-[#8a8a82] text-[12px] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
                           {h.day}
                         </span>
-                        <span className="text-[#0f0f0d] text-[12px] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+                        <span className="text-[#f8f7f2] text-[12px] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
                           {h.hours}
                         </span>
                       </div>
                     ))}
-                    <p className="text-[#8a8a82] text-[10px] font-light mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
-                      Self Check Gym: 24/7 für Mitglieder
+                    <p className="text-[#5a5a55] text-[10px] font-light mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
+                      Self Check Gym: 05:00 – 23:00 Uhr · 365 Tage
                     </p>
                   </div>
                 </div>
@@ -81,11 +81,17 @@ export default function ContactPage() {
             </div>
 
             {/* Contact form */}
-            <div className="lg:col-span-8 bg-[#fafaf8] p-10 lg:p-16">
+            <div className="lg:col-span-8 bg-[#181816] p-10 lg:p-16 relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#c19255] to-transparent opacity-60" />
+
               <SectionLabel>Nachricht senden</SectionLabel>
               <h2
-                className="text-[#0f0f0d] text-[2rem] font-light leading-tight tracking-[-0.01em] mb-10"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="text-[#f8f7f2] uppercase leading-[0.9] tracking-[-0.01em] mb-10"
+                style={{
+                  fontFamily: "'Barlow Condensed', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+                }}
               >
                 Was können wir für dich tun?
               </h2>
@@ -93,29 +99,23 @@ export default function ContactPage() {
               <form className="flex flex-col gap-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label
-                      className="block text-[#8a8a82] text-[10px] tracking-[0.18em] uppercase font-light mb-2"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
+                    <label className="block text-[#c19255] text-[10px] tracking-[0.18em] uppercase font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
                       Vorname
                     </label>
                     <input
                       type="text"
-                      className="w-full bg-transparent border-b border-[#c8c8bf] py-3 text-[#0f0f0d] text-[14px] font-light outline-none focus:border-[#b8a882] transition-colors"
+                      className="w-full bg-transparent border-b border-[#3e3e3a] py-3 text-[#f8f7f2] text-[14px] font-light outline-none focus:border-[#c19255] transition-colors"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                       placeholder="Max"
                     />
                   </div>
                   <div>
-                    <label
-                      className="block text-[#8a8a82] text-[10px] tracking-[0.18em] uppercase font-light mb-2"
-                      style={{ fontFamily: "'Inter', sans-serif" }}
-                    >
+                    <label className="block text-[#c19255] text-[10px] tracking-[0.18em] uppercase font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
                       Nachname
                     </label>
                     <input
                       type="text"
-                      className="w-full bg-transparent border-b border-[#c8c8bf] py-3 text-[#0f0f0d] text-[14px] font-light outline-none focus:border-[#b8a882] transition-colors"
+                      className="w-full bg-transparent border-b border-[#3e3e3a] py-3 text-[#f8f7f2] text-[14px] font-light outline-none focus:border-[#c19255] transition-colors"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                       placeholder="Mustermann"
                     />
@@ -123,29 +123,23 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label
-                    className="block text-[#8a8a82] text-[10px] tracking-[0.18em] uppercase font-light mb-2"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
+                  <label className="block text-[#c19255] text-[10px] tracking-[0.18em] uppercase font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
                     E-Mail
                   </label>
                   <input
                     type="email"
-                    className="w-full bg-transparent border-b border-[#c8c8bf] py-3 text-[#0f0f0d] text-[14px] font-light outline-none focus:border-[#b8a882] transition-colors"
+                    className="w-full bg-transparent border-b border-[#3e3e3a] py-3 text-[#f8f7f2] text-[14px] font-light outline-none focus:border-[#c19255] transition-colors"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                     placeholder="max@example.de"
                   />
                 </div>
 
                 <div>
-                  <label
-                    className="block text-[#8a8a82] text-[10px] tracking-[0.18em] uppercase font-light mb-2"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
+                  <label className="block text-[#c19255] text-[10px] tracking-[0.18em] uppercase font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Interesse
                   </label>
                   <select
-                    className="w-full bg-transparent border-b border-[#c8c8bf] py-3 text-[#0f0f0d] text-[14px] font-light outline-none focus:border-[#b8a882] transition-colors appearance-none cursor-pointer"
+                    className="w-full bg-[#181816] border-b border-[#3e3e3a] py-3 text-[#f8f7f2] text-[14px] font-light outline-none focus:border-[#c19255] transition-colors appearance-none cursor-pointer"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <option value="">Bitte wählen</option>
@@ -158,15 +152,12 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label
-                    className="block text-[#8a8a82] text-[10px] tracking-[0.18em] uppercase font-light mb-2"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
+                  <label className="block text-[#c19255] text-[10px] tracking-[0.18em] uppercase font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Nachricht
                   </label>
                   <textarea
                     rows={5}
-                    className="w-full bg-transparent border-b border-[#c8c8bf] py-3 text-[#0f0f0d] text-[14px] font-light outline-none focus:border-[#b8a882] transition-colors resize-none"
+                    className="w-full bg-transparent border-b border-[#3e3e3a] py-3 text-[#f8f7f2] text-[14px] font-light outline-none focus:border-[#c19255] transition-colors resize-none"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                     placeholder="Wie können wir helfen?"
                   />
@@ -175,7 +166,7 @@ export default function ContactPage() {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="bg-[#b8a882] text-[#0f0f0d] text-[11px] tracking-[0.18em] uppercase font-light px-10 py-4 hover:bg-[#d4c9a8] transition-colors"
+                    className="bg-[#c19255] text-[#0d0d0b] text-[11px] tracking-[0.18em] uppercase font-semibold px-10 py-4 hover:bg-[#d4ab74] transition-colors"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Nachricht senden

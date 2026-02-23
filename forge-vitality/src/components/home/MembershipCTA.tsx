@@ -3,84 +3,89 @@ import Button from "@/components/Button";
 
 const plans = [
   {
-    name: "Classes",
-    price: "89",
+    name: "Self-Check Gym",
+    price: "44,90",
     period: "/Monat",
     features: [
-      "Unbegrenzte Kursbesuche",
-      "Kursplan-App",
-      "Einführungsgespräch",
-      "Community Zugang",
+      "05:00 – 23:00 Uhr Zugang",
+      "365 Tage im Jahr",
+      "PRECOR Premium Geräte",
+      "Face-ID Zugang",
     ],
     accent: false,
   },
   {
-    name: "Performance",
-    price: "129",
+    name: "Hybrid Paket",
+    price: "74,90",
     period: "/Monat",
     features: [
-      "Kurse + Self Check Gym",
-      "Zugang 7 Tage / 24h",
-      "Monatliches Check-in",
-      "Physiotherapie-Rabatt 10%",
+      "Alles aus Self-Check Gym",
+      "ELEIKO Functional Area",
+      "Kleine Gruppen (max. 8)",
+      "Performance Training",
     ],
     accent: true,
-  },
-  {
-    name: "Elite",
-    price: "189",
-    period: "/Monat",
-    features: [
-      "Alles aus Performance",
-      "1× PT-Session/Monat",
-      "Bewegungsanalyse",
-      "Priority Buchung",
-    ],
-    accent: false,
   },
 ];
 
 export default function MembershipCTA() {
   return (
-    <section className="bg-[#f4f3ef] py-28 lg:py-40">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+    <section className="bg-[#111110] py-24 lg:py-36">
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-16 lg:mb-24">
-          <SectionLabel>Mitgliedschaft</SectionLabel>
+        <div className="text-center mb-16 lg:mb-20">
+          <SectionLabel center>Mitgliedschaft</SectionLabel>
           <h2
-            className="text-[#0f0f0d] text-[clamp(2.5rem,5vw,4.5rem)] font-light leading-[0.95] tracking-[-0.02em]"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            className="text-[#f8f7f2] uppercase leading-[0.9] tracking-[-0.01em]"
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 800,
+              fontSize: "clamp(3rem, 7vw, 6.5rem)",
+            }}
           >
-            Dein Zugang
-            <br />
-            <em>zur Forge.</em>
+            Dein Zugang zur{" "}
+            <span className="text-[#c19255]">Forge.</span>
           </h2>
         </div>
 
         {/* Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#c8c8bf]/40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#c19255]/10 max-w-4xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`p-10 lg:p-12 ${
-                plan.accent ? "bg-[#0f0f0d]" : "bg-[#f4f3ef] hover:bg-[#fafaf8]"
+              className={`p-10 lg:p-12 relative overflow-hidden ${
+                plan.accent
+                  ? "bg-[#1a1a16]"
+                  : "bg-[#181816] hover:bg-[#1e1e1c]"
               } transition-colors duration-300`}
             >
+              {/* Gold top accent for featured plan */}
+              {plan.accent && (
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#c19255] via-[#d4ab74] to-[#c19255]" />
+              )}
+
               <p
-                className={`text-[10px] tracking-[0.22em] uppercase font-light mb-8 ${
-                  plan.accent ? "text-[#b8a882]" : "text-[#b8a882]"
-                }`}
+                className="text-[#c19255] text-[10px] tracking-[0.25em] uppercase font-semibold mb-6"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {plan.name}
               </p>
 
-              <div className="flex items-baseline gap-1 mb-10">
+              <p
+                className="text-[#5a5a55] text-[11px] font-light mb-1"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                ab
+              </p>
+              <div className="flex items-baseline gap-1 mb-8">
                 <span
-                  className={`text-[3.5rem] font-light leading-none tracking-tight ${
-                    plan.accent ? "text-[#fafaf8]" : "text-[#0f0f0d]"
-                  }`}
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  className="text-[#f8f7f2] leading-none"
+                  style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontWeight: 700,
+                    fontSize: "3.5rem",
+                    letterSpacing: "-0.02em",
+                  }}
                 >
                   {plan.price}€
                 </span>
@@ -92,16 +97,14 @@ export default function MembershipCTA() {
                 </span>
               </div>
 
-              <div className="h-px bg-[#b8a882]/20 mb-8" />
+              <div className="h-px bg-[#c19255]/15 mb-8" />
 
               <ul className="flex flex-col gap-4 mb-10">
                 {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3">
-                    <div className="w-px h-3.5 bg-[#b8a882] mt-1 flex-shrink-0" />
+                  <li key={f} className="flex items-center gap-3">
+                    <div className="w-1 h-1 bg-[#c19255] flex-shrink-0 rounded-full" />
                     <span
-                      className={`text-[12px] font-light ${
-                        plan.accent ? "text-[#c8c8bf]" : "text-[#3a3a35]"
-                      }`}
+                      className="text-[12px] font-light text-[#b8b8b0]"
                       style={{ fontFamily: "'Inter', sans-serif" }}
                     >
                       {f}
@@ -122,10 +125,10 @@ export default function MembershipCTA() {
         </div>
 
         <p
-          className="text-center text-[#8a8a82] text-[11px] font-light mt-8 tracking-wider"
+          className="text-center text-[#5a5a55] text-[11px] font-light mt-8 tracking-wider"
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
-          Alle Preise inkl. MwSt. · Keine Aufnahmegebühr · Monatlich kündbar
+          Alle Preise inkl. MwSt. · Aktivierungsgebühr 14,90 €
         </p>
       </div>
     </section>

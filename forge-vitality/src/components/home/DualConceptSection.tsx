@@ -3,59 +3,78 @@ import Button from "@/components/Button";
 
 export default function DualConceptSection() {
   return (
-    <section className="bg-[#f4f3ef] py-28 lg:py-40">
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+    <section className="bg-[#0d0d0b] py-24 lg:py-36">
+      <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
         {/* Header */}
-        <div className="mb-20 lg:mb-28">
-          <SectionLabel>Die zwei Welten</SectionLabel>
+        <div className="mb-16 lg:mb-20">
+          <SectionLabel>Dein Training</SectionLabel>
           <h2
-            className="text-[#0f0f0d] text-[clamp(2.5rem,5vw,5rem)] font-light leading-[0.95] tracking-[-0.02em] max-w-2xl"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            className="text-[#f8f7f2] leading-[0.9] tracking-[-0.01em] uppercase max-w-3xl"
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 800,
+              fontSize: "clamp(3rem, 7vw, 6.5rem)",
+            }}
           >
-            Zwei Wege.
-            <br />
-            <em>Ein Ziel.</em>
+            Zwei Wege.{" "}
+            <span className="text-[#c19255]">Ein Ziel.</span>
           </h2>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#c8c8bf]/30">
-          {/* Card 1: Classes */}
-          <div className="bg-[#f4f3ef] p-12 lg:p-16 group hover:bg-[#fafaf8] transition-colors duration-500">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#c19255]/10">
+          {/* Card 1: Hybrid Paket */}
+          <div className="bg-[#181816] p-12 lg:p-16 group relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#c19255] to-transparent opacity-60" />
+
             {/* Number */}
             <p
-              className="text-[#b8a882]/30 text-[6rem] font-light leading-none mb-8 tracking-tighter"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-[#c19255]/15 leading-none mb-8"
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 800,
+                fontSize: "8rem",
+                lineHeight: 1,
+              }}
             >
               01
             </p>
-            <SectionLabel>Geführtes Training</SectionLabel>
+
+            <SectionLabel>Hybrid Fitness</SectionLabel>
+
             <h3
-              className="text-[#0f0f0d] text-[2.2rem] font-light leading-tight tracking-[-0.01em] mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-[#f8f7f2] uppercase mb-6"
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(2rem, 4vw, 3rem)",
+                lineHeight: 0.95,
+                letterSpacing: "-0.01em",
+              }}
             >
-              Functional Classes
+              Hybrid Paket
             </h3>
+
             <p
-              className="text-[#8a8a82] text-[13px] leading-[1.9] font-light mb-10 max-w-md"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#8a8a82] text-[13px] leading-[1.85] font-light mb-10 max-w-md"
+              style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
             >
-              Strukturierte, geführte Kurse in kleinen Gruppen. Jede Session ist
-              durchdacht — von der Mobilisation bis zur Konditionierung. Kein
-              Wildwuchs. Kein Durcheinander. Nur zielgerichtetes Training unter
-              qualifizierter Anleitung.
+              Performance Training und Functional Fitness in kleinen Gruppen —
+              kombiniert mit dem vollen Zugang zum Self-Check Gym. Technik
+              Sessions, Trainingspläne und strukturierte Progression inklusive.
             </p>
+
             <div className="flex flex-col gap-3 mb-10">
               {[
-                "Kleine Gruppen, maximale Aufmerksamkeit",
-                "Strukturierte Progressionspläne",
-                "Beweglichkeit, Kraft und Kondition",
-                "Alle Level willkommen",
+                "Kleine Gruppen (max. 8 Teilnehmer)",
+                "ELEIKO Functional Area",
+                "Performance Training & Technik Sessions",
+                "Quartalsweise Trainingspläne",
               ].map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <div className="w-px h-4 bg-[#b8a882] mt-1 flex-shrink-0" />
+                <div key={item} className="flex items-center gap-3">
+                  <div className="w-1 h-1 bg-[#c19255] flex-shrink-0 rounded-full" />
                   <span
-                    className="text-[12px] text-[#3a3a35] font-light tracking-wide"
+                    className="text-[12px] text-[#b8b8b0] font-light tracking-wide"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {item}
@@ -63,49 +82,65 @@ export default function DualConceptSection() {
                 </div>
               ))}
             </div>
-            <Button href="/training" variant="outline">
-              Kurse ansehen
+
+            <Button href="/membership" variant="outline">
+              Hybrid Paket ansehen
             </Button>
           </div>
 
           {/* Card 2: Self Check Gym */}
-          <div className="bg-[#0f0f0d] p-12 lg:p-16 group relative overflow-hidden">
-            {/* Subtle bg accent */}
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#b8a882]/5 blur-[80px]" />
+          <div className="bg-[#222220] p-12 lg:p-16 group relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#c19255]/50 to-transparent opacity-40" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#c19255]/4 blur-[80px]" />
+
             {/* Number */}
             <p
-              className="text-[#b8a882]/20 text-[6rem] font-light leading-none mb-8 tracking-tighter relative z-10"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-[#c19255]/10 leading-none mb-8"
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 800,
+                fontSize: "8rem",
+                lineHeight: 1,
+              }}
             >
               02
             </p>
+
             <SectionLabel>Freies Training</SectionLabel>
+
             <h3
-              className="text-[#fafaf8] text-[2.2rem] font-light leading-tight tracking-[-0.01em] mb-6 relative z-10"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-[#f8f7f2] uppercase mb-6 relative z-10"
+              style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontWeight: 700,
+                fontSize: "clamp(2rem, 4vw, 3rem)",
+                lineHeight: 0.95,
+                letterSpacing: "-0.01em",
+              }}
             >
               Self Check Gym
             </h3>
+
             <p
-              className="text-[#8a8a82] text-[13px] leading-[1.9] font-light mb-10 max-w-md relative z-10"
-              style={{ fontFamily: "'Inter', sans-serif" }}
+              className="text-[#8a8a82] text-[13px] leading-[1.85] font-light mb-10 max-w-md relative z-10"
+              style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
             >
-              Exklusive Geräte. Hochwertige Hanteln. Bewusstes Design. Das Self
-              Check Gym ist kein normales Fitnessstudio — es ist eine durchdachte
-              Umgebung für Menschen, die wissen, was sie tun. Ruhig, fokussiert,
-              ungestört.
+              PRECOR Premium Geräte. Face-ID Zugang. Eigenverantwortliches
+              Krafttraining von 05:00 bis 23:00 Uhr — 365 Tage im Jahr.
+              Ruhig, fokussiert, ungestört.
             </p>
+
             <div className="flex flex-col gap-3 mb-10 relative z-10">
               {[
-                "Premium-Equipment, curated selection",
-                "Ruhige, fokussierte Atmosphäre",
-                "Zugang rund um die Uhr für Mitglieder",
-                "Direkt neben der Physiotherapie",
+                "PRECOR Premium Gerätepark",
+                "Face-ID Zugang · Videoüberwacht",
+                "05:00 – 23:00 Uhr · 365 Tage",
+                "WLAN & Parkplätze inklusive",
               ].map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <div className="w-px h-4 bg-[#b8a882] mt-1 flex-shrink-0" />
+                <div key={item} className="flex items-center gap-3">
+                  <div className="w-1 h-1 bg-[#c19255] flex-shrink-0 rounded-full" />
                   <span
-                    className="text-[12px] text-[#c8c8bf] font-light tracking-wide"
+                    className="text-[12px] text-[#b8b8b0] font-light tracking-wide"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {item}
@@ -113,6 +148,7 @@ export default function DualConceptSection() {
                 </div>
               ))}
             </div>
+
             <Button href="/training#selfcheck" variant="ghost">
               Self Check Gym
             </Button>

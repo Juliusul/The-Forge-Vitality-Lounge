@@ -1,102 +1,108 @@
 import Image from "next/image";
-import Button from "@/components/Button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-[#0f0f0d] flex flex-col justify-end overflow-hidden">
-      {/* Real background image with overlay */}
+    <section className="relative min-h-screen bg-[#0d0d0b] flex flex-col overflow-hidden">
+
+      {/* Background Image — kettlebell group training */}
       <div className="absolute inset-0">
         <Image
-          src="/img-training-hero.jpg"
+          src="/img-hero-kettlebell.jpg"
           alt="The Forge Training"
           fill
           className="object-cover object-center"
           priority
           quality={90}
         />
-        {/* Dark overlay — architectural gradient over image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0d]/95 via-[#0f0f0d]/75 to-[#0f0f0d]/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0d]/80 via-transparent to-[#0f0f0d]/40" />
-        {/* Gold glow */}
-        <div className="absolute bottom-0 right-0 w-[40%] h-[40%] bg-[#b8a882]/8 blur-[120px]" />
+        {/* B&W treatment + strong left overlay for text legibility */}
+        <div className="absolute inset-0 bg-[#0d0d0b]/30 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0d0b] via-[#0d0d0b]/90 to-[#0d0d0b]/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0b]/95 via-transparent to-[#0d0d0b]/30" />
       </div>
 
-      {/* Vertical side label */}
-      <div className="absolute left-8 lg:left-16 top-1/2 -translate-y-1/2 hidden lg:flex items-center gap-4">
-        <div className="h-px w-8 bg-[#b8a882]/40" />
-        <span
-          className="text-[#8a8a82] text-[9px] tracking-[0.3em] uppercase font-light"
-          style={{ fontFamily: "'Inter', sans-serif", writingMode: "vertical-rl" }}
-        >
-          Bad Lippspringe · Paderborner Land
-        </span>
-      </div>
+      {/* Gold accent — left edge bar */}
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-[#c19255] to-transparent opacity-60" />
 
       {/* Main content */}
-      <div className="relative z-10 max-w-[1400px] mx-auto px-8 lg:px-16 pb-24 lg:pb-32 pt-32">
-        <div className="max-w-4xl">
-          {/* Kicker */}
-          <p
-            className="text-[#b8a882] text-[10px] tracking-[0.25em] uppercase font-light mb-8"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            Premium Performance Health Club
-          </p>
+      <div className="relative z-10 flex flex-col justify-center flex-1 max-w-[1440px] mx-auto w-full px-8 lg:px-16 pt-32 pb-16">
+        <div className="max-w-3xl">
 
-          {/* Main headline — Playfair Display */}
+          {/* Label */}
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-8 h-px bg-[#c19255]" />
+            <span
+              className="text-[#c19255] text-[11px] tracking-[0.22em] uppercase font-medium"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Hybrid Fitness · Krafttraining · Bad Lippspringe
+            </span>
+          </div>
+
+          {/* Hero Headline */}
           <h1
-            className="text-[#fafaf8] text-[clamp(3.5rem,8vw,8rem)] font-normal leading-[0.92] tracking-[-0.025em] mb-10"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+            className="text-[#f8f7f2] leading-[0.88] tracking-[-0.01em] mb-8 uppercase"
+            style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontWeight: 800,
+              fontSize: "clamp(4.5rem, 12vw, 11rem)",
+            }}
           >
-            Trainiert.
-            <br />
-            <em className="text-[#b8a882]">Präzise.</em>
-            <br />
-            Beständig.
+            STÄRKE.<br />
+            <span className="text-[#c19255]">PRÄZISION.</span><br />
+            LEISTUNG.
           </h1>
 
-          {/* Subline */}
+          {/* Subtext */}
           <p
-            className="text-[#c8c8bf] text-base font-light leading-relaxed max-w-lg mb-14"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-[#8a8a82] text-[15px] font-light leading-relaxed max-w-xl mb-12"
+            style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
           >
-            The Forge vereint funktionelles Training, ein exklusives Self Check Gym
-            und Physiotherapie unter einem Dach — für Menschen, die Qualität über Lautstärke stellen.
+            Alles an einem Ort — Hybrid Fitness, Krafttraining und ein Self-Check
+            Gym mit maximaler Flexibilität. Dein Training, dein Tempo.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button href="/membership" variant="primary">
-              Mitglied werden
-            </Button>
-            <Button href="/training" variant="ghost">
-              Training entdecken
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="/contact"
+              className="inline-block bg-[#c19255] text-[#0d0d0b] text-[11px] tracking-[0.2em] uppercase font-semibold px-8 py-4 hover:bg-[#d4ab74] transition-colors duration-200"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Kostenlos Probetraining
+            </Link>
+            <Link
+              href="/training"
+              className="inline-block border border-[#f8f7f2]/30 text-[#f8f7f2] text-[11px] tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-[#c19255] hover:text-[#c19255] transition-colors duration-200"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Training ansehen
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Bottom status bar */}
-      <div className="relative z-10 border-t border-[#b8a882]/10 bg-[#0f0f0d]/60 backdrop-blur-sm">
-        <div className="max-w-[1400px] mx-auto px-8 lg:px-16 py-6 flex flex-col sm:flex-row items-center gap-6 sm:gap-0 justify-between">
+      {/* Bottom stats bar */}
+      <div className="relative z-10 bg-[#181816]/90 backdrop-blur-sm border-t border-[#c19255]/15">
+        <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-5 grid grid-cols-2 md:grid-cols-4 divide-x divide-[#c19255]/15">
           {[
-            { label: "Trainingswelten", value: "2" },
-            { label: "Wöchentliche Kurse", value: "20+" },
-            { label: "m² Premium Fläche", value: "800" },
-            { label: "Erfahrung", value: "Seit 2024" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center sm:text-left">
+            { value: "2", label: "Trainingswelten" },
+            { value: "20+", label: "Kurse / Woche" },
+            { value: "800 m²", label: "Performance Fläche" },
+            { value: "Physio", label: "Im selben Haus" },
+          ].map((s) => (
+            <div key={s.label} className="px-6 first:pl-0 last:pr-0 py-1 text-center md:text-left">
               <p
-                className="text-[#fafaf8] text-2xl font-normal tracking-tight mb-0.5"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="text-[#f8f7f2] leading-none mb-1 uppercase"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.6rem" }}
               >
-                {stat.value}
+                {s.value}
               </p>
               <p
-                className="text-[#8a8a82] text-[10px] tracking-[0.14em] uppercase font-light"
+                className="text-[#5a5a55] text-[10px] tracking-[0.16em] uppercase font-medium"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                {stat.label}
+                {s.label}
               </p>
             </div>
           ))}
