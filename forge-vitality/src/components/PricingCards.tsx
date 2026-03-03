@@ -4,7 +4,7 @@ import { useState } from "react";
 import Button from "@/components/Button";
 import SectionLabel from "@/components/SectionLabel";
 
-const selfCheckPricing = [
+const smartGymPricing = [
   { label: "12 Monate", price: "44,90" },
   { label: "6 Monate", price: "49,90" },
   { label: "1 Monat", price: "59,90" },
@@ -16,35 +16,34 @@ const hybridPricing = [
   { label: "1 Monat", price: "89,90" },
 ];
 
-const selfCheckFeatures = [
+const smartGymFeatures = [
   "05:00 – 23:00 Uhr Zugang",
   "365 Tage im Jahr",
   "PRECOR Premium Geräte",
-  "App Trainingspläne",
-  "WLAN & Parkplätze",
   "Face-ID Zugang",
+  "WLAN & Parkplätze",
   "Videoüberwachung",
   "Große Einzelumkleiden",
 ];
 
 const hybridFeatures = [
-  "Alles aus Self-Check Gym",
-  "ELEIKO Functional Area",
+  "Alles aus Smart Gym",
+  "Technikkurse (Kettlebell, Bodyweight, Barbell)",
+  "Strength & Conditioning Sessions",
   "Kleine Gruppen (max. 8 Teilnehmer)",
-  "Performance Training",
-  "Technik Sessions",
-  "4 Trainingspläne pro Jahr (quartalsweise)",
+  "Trainingsplan alle 3 Monate",
+  "ELEIKO Functional Area",
 ];
 
 export default function PricingCards() {
-  const [selfCheckIdx, setSelfCheckIdx] = useState(0);
+  const [smartGymIdx, setSmartGymIdx] = useState(0);
   const [hybridIdx, setHybridIdx] = useState(0);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#c19255]/10">
-      {/* Self-Check Gym */}
+      {/* Smart Gym */}
       <div className="p-10 lg:p-12 relative overflow-hidden bg-[#181816]">
-        <SectionLabel>Eigenverantwortliches Training</SectionLabel>
+        <SectionLabel>Basis-Mitgliedschaft</SectionLabel>
         <h2
           className="text-[#f8f7f2] uppercase mb-2"
           style={{
@@ -54,22 +53,32 @@ export default function PricingCards() {
             letterSpacing: "-0.01em",
           }}
         >
-          Self-Check Gym
+          Smart Gym
         </h2>
 
         <div className="my-6">
-          <select
-            value={selfCheckIdx}
-            onChange={(e) => setSelfCheckIdx(Number(e.target.value))}
-            className="w-full bg-[#111110] border border-[#c19255]/20 text-[#f8f7f2] text-[13px] font-light px-4 py-3 outline-none focus:border-[#c19255] transition-colors appearance-none cursor-pointer"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            {selfCheckPricing.map((opt, i) => (
-              <option key={opt.label} value={i}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
+          <p className="text-[#5a5a55] text-[10px] tracking-[0.18em] uppercase font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Laufzeit wählen
+          </p>
+          <div className="relative">
+            <select
+              value={smartGymIdx}
+              onChange={(e) => setSmartGymIdx(Number(e.target.value))}
+              className="w-full bg-[#111110] border border-[#c19255]/20 text-[#f8f7f2] text-[13px] font-light px-4 py-3 pr-10 outline-none focus:border-[#c19255] transition-colors appearance-none cursor-pointer"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              {smartGymPricing.map((opt, i) => (
+                <option key={opt.label} value={i}>
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L11 1" stroke="#c19255" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          </div>
         </div>
 
         <div className="flex items-baseline gap-1 my-8">
@@ -82,7 +91,7 @@ export default function PricingCards() {
               letterSpacing: "-0.02em",
             }}
           >
-            {selfCheckPricing[selfCheckIdx].price}€
+            {smartGymPricing[smartGymIdx].price}€
           </span>
           <span
             className="text-[#8a8a82] text-sm font-light"
@@ -102,7 +111,7 @@ export default function PricingCards() {
             Inklusive
           </p>
           <ul className="flex flex-col gap-3">
-            {selfCheckFeatures.map((f) => (
+            {smartGymFeatures.map((f) => (
               <li key={f} className="flex items-center gap-3">
                 <div className="w-1 h-1 bg-[#c19255] flex-shrink-0 rounded-full" />
                 <span
@@ -150,10 +159,10 @@ export default function PricingCards() {
         </Button>
       </div>
 
-      {/* Hybrid Paket */}
+      {/* Hybrid Fitness */}
       <div className="p-10 lg:p-12 relative overflow-hidden bg-[#1a1a16]">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#c19255] via-[#d4ab74] to-[#c19255]" />
-        <SectionLabel>Inkl. Self-Check Gym</SectionLabel>
+        <SectionLabel>Inkl. Smart Gym</SectionLabel>
         <h2
           className="text-[#f8f7f2] uppercase mb-2"
           style={{
@@ -163,22 +172,32 @@ export default function PricingCards() {
             letterSpacing: "-0.01em",
           }}
         >
-          Hybrid Paket
+          Hybrid Fitness
         </h2>
 
         <div className="my-6">
-          <select
-            value={hybridIdx}
-            onChange={(e) => setHybridIdx(Number(e.target.value))}
-            className="w-full bg-[#111110] border border-[#c19255]/20 text-[#f8f7f2] text-[13px] font-light px-4 py-3 outline-none focus:border-[#c19255] transition-colors appearance-none cursor-pointer"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            {hybridPricing.map((opt, i) => (
-              <option key={opt.label} value={i}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
+          <p className="text-[#5a5a55] text-[10px] tracking-[0.18em] uppercase font-semibold mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+            Laufzeit wählen
+          </p>
+          <div className="relative">
+            <select
+              value={hybridIdx}
+              onChange={(e) => setHybridIdx(Number(e.target.value))}
+              className="w-full bg-[#111110] border border-[#c19255]/20 text-[#f8f7f2] text-[13px] font-light px-4 py-3 pr-10 outline-none focus:border-[#c19255] transition-colors appearance-none cursor-pointer"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              {hybridPricing.map((opt, i) => (
+                <option key={opt.label} value={i}>
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L11 1" stroke="#c19255" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          </div>
         </div>
 
         <div className="flex items-baseline gap-1 my-8">

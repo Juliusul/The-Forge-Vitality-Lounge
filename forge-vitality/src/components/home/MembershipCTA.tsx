@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 
 const plans = [
   {
-    name: "Self-Check Gym",
+    name: "Smart Gym",
     price: "44,90",
     period: "/Monat",
     features: [
@@ -15,14 +15,14 @@ const plans = [
     accent: false,
   },
   {
-    name: "Hybrid Paket",
+    name: "Hybrid Fitness",
     price: "74,90",
     period: "/Monat",
     features: [
-      "Alles aus Self-Check Gym",
-      "ELEIKO Functional Area",
+      "Alles aus Smart Gym",
+      "Technikkurse & S&C Sessions",
       "Kleine Gruppen (max. 8)",
-      "Performance Training",
+      "Trainingsplan alle 3 Monate",
     ],
     accent: true,
   },

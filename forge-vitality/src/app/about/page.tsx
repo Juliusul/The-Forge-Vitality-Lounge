@@ -22,7 +22,7 @@ const values = [
   },
   {
     label: "Professionalität",
-    body: "Qualifizierte Coaches, medizinische Nähe, transparente Kommunikation. Das ist unser Anspruch.",
+    body: "Qualifizierte Coaches, transparente Kommunikation und ein leistungsorientierter Ansatz. Das ist unser Anspruch.",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
       <PageHero
         label="Über The Forge"
         title={<>Eine Idee.<br /><span className="text-[#c19255]">Ein Standard.</span></>}
-        subtitle="The Forge entstand aus der Überzeugung, dass Hybrid Fitness, Krafttraining und Gesundheit kein Kompromiss sein müssen."
+        subtitle="The Forge entstand aus der Überzeugung, dass Hybrid Fitness, Krafttraining und leistungsorientiertes Training kein Kompromiss sein müssen."
       />
 
       {/* Story section */}
@@ -56,9 +56,9 @@ export default function AboutPage() {
               {/* Timeline */}
               <div className="flex flex-col gap-8">
                 {[
-                  { year: "2018", text: "Gründung der Vitality Lounge in Paderborn — Premium-Fitness für Menschen mit Anspruch." },
-                  { year: "2022", text: "Erste Konzeptskizzen für The Forge: ein Training-Concept jenseits der Massenware." },
-                  { year: "2024", text: "Eröffnung von The Forge in Bad Lippspringe — Hybrid Fitness, Self-Check Gym und Physiotherapie unter einem Dach." },
+                  { year: "2021", text: "Gründung der Vitality Lounge in Paderborn — Premium-Fitness für Menschen mit Anspruch." },
+                  { year: "2025", text: "Erste Konzeptskizzen für The Forge: ein Training-Concept jenseits der Massenware." },
+                  { year: "2026", text: "Eröffnung von The Forge in Bad Lippspringe — Hybrid Fitness, Smart Gym und Physiotherapie unter einem Dach." },
                 ].map((t) => (
                   <div key={t.year} className="flex gap-6">
                     <div className="flex flex-col items-center">
@@ -96,7 +96,7 @@ export default function AboutPage() {
               <p className="text-[#8a8a82] text-[13px] leading-[1.85] font-light" style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}>
                 The Forge ist Teil der Vitality Lounge Gruppe — dem führenden
                 Premium-Fitness-Konzept in der Region Paderborn. Unsere Werte:
-                Qualität, Kompetenz und ein langfristiger Blick auf Gesundheit.
+                Qualität, Kompetenz und ein langfristiger Blick auf Leistung und Training.
                 Was in Paderborn begann, hat in Bad Lippspringe ein zweites Zuhause gefunden.
               </p>
             </div>

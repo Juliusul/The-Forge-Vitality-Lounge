@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-[11px] leading-loose text-[#5a5a55] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Performance Health Club<br />
+              Hybrid Fitness Studio<br />
               Bad Lippspringe, Deutschland
             </p>
           </div>
@@ -30,8 +30,8 @@ export default function Footer() {
             </p>
             <nav className="flex flex-col gap-3">
               {[
-                { href: "/training", label: "Kurse & Classes" },
-                { href: "/training#selfcheck", label: "Self Check Gym" },
+                { href: "/training", label: "Hybrid Fitness Kurse" },
+                { href: "/training#smartgym", label: "Smart Gym" },
                 { href: "/timetable", label: "Kursplan" },
                 { href: "/coaches", label: "Coaches" },
               ].map((l) => (

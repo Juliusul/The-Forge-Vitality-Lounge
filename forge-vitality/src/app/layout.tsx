@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "The Forge by Vitality Lounge – Hybrid Fitness & Krafttraining Bad Lippspringe",
   description:
-    "The Forge ist dein Hybrid Fitness Studio in Bad Lippspringe. Functional Fitness, Krafttraining, Self Check Gym und Physiotherapie — alles an einem Ort.",
-  keywords: "Hybrid Fitness Bad Lippspringe, Functional Fitness Bad Lippspringe, Krafttraining Bad Lippspringe, Self Check Gym, Vitality Lounge, Gym Bad Lippspringe",
+    "The Forge ist dein Hybrid Fitness Studio in Bad Lippspringe. Functional Fitness, Krafttraining, Smart Gym und Physiotherapie — alles an einem Ort.",
+  keywords: "Hybrid Fitness Bad Lippspringe, Functional Fitness Bad Lippspringe, Krafttraining Bad Lippspringe, Smart Gym, Vitality Lounge, Gym Bad Lippspringe, Athletiktraining, Personal Training",
   openGraph: {
     title: "The Forge by Vitality Lounge",
     description: "Hybrid Fitness & Krafttraining in Bad Lippspringe",

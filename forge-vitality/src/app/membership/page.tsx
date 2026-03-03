@@ -5,23 +5,22 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Mitgliedschaft – The Forge by Vitality Lounge",
-  description: "Werde Mitglied bei The Forge. Self-Check Gym oder Hybrid Paket – Hybrid Fitness und Krafttraining in Bad Lippspringe.",
+  description: "Werde Mitglied bei The Forge. Smart Gym oder Hybrid Fitness – Functional Fitness und Krafttraining in Bad Lippspringe.",
 };
 
 const optionalModules = [
-  { name: "Technik Card", price: "80 €", detail: "10 Einheiten" },
-  { name: "Hybrid Kurs Zehnerkarte", price: "150 €", detail: "" },
-  { name: "Personal Training", price: "auf Anfrage", detail: "" },
-  { name: "Geräteeinweisung", price: "29,90 €", detail: "" },
+  { name: "Personal Training", price: "auf Anfrage", detail: "Individuell buchbar" },
+  { name: "Athletiktraining", price: "auf Anfrage", detail: "Für Vereine & Einzelsportler" },
+  { name: "Geräteeinweisung", price: "29,90 €", detail: "Pro Termin" },
 ];
 
 const faqs = [
-  { q: "Wie funktioniert der Zugang?", a: "Der Zugang erfolgt per Face-ID. Du kannst das Studio täglich von 05:00 bis 23:00 Uhr eigenverantwortlich nutzen — 365 Tage im Jahr. Es gibt kein Personal vor Ort, das Studio ist videoüberwacht." },
-  { q: "Bekomme ich einen Trainingsplan?", a: "Im Self-Check Gym hast du Zugang zu App-basierten Trainingsplänen. Im Hybrid Paket erhältst du 4 individuell angepasste Trainingspläne pro Jahr — quartalsweise aktualisiert." },
-  { q: "Gibt es Personal Training?", a: "Ja. Personal Training ist als Zusatzleistung auf Anfrage verfügbar — unabhängig von deiner Mitgliedschaft." },
-  { q: "Ab welchem Alter?", a: "Die Mitgliedschaft ist ab 16 Jahren möglich. Unter 18 benötigen wir eine Einverständniserklärung eines Erziehungsberechtigten." },
-  { q: "Ist das Studio überwacht?", a: "Ja. Das gesamte Studio ist videoüberwacht. Das Training erfolgt eigenverantwortlich — du trainierst selbstständig und auf eigene Verantwortung." },
-  { q: "Kann ich vor der Mitgliedschaft probetrainieren?", a: "Ja. Wir bieten ein kostenloses Probetraining an. Einfach Termin vereinbaren." },
+  { q: "Wie funktioniert der Smart Gym Zugang?", a: "Der Zugang erfolgt per Face-ID. Du kannst das Smart Gym täglich von 05:00 bis 23:00 Uhr eigenverantwortlich nutzen — 365 Tage im Jahr. Das Studio ist videoüberwacht." },
+  { q: "Was ist der Unterschied zwischen Smart Gym und Hybrid Fitness?", a: "Das Smart Gym ist eigenverantwortliches Gerätetraining mit PRECOR Geräten. Hybrid Fitness erweitert deine Mitgliedschaft um Technikkurse, Strength & Conditioning Sessions, Trainingsplanung und Zugang zur ELEIKO Functional Area." },
+  { q: "Bekomme ich einen Trainingsplan?", a: "Im Hybrid Fitness Paket erhältst du alle 3 Monate einen individuellen Trainingsplan. Im Smart Gym trainierst du eigenverantwortlich." },
+  { q: "Gibt es Personal Training?", a: "Ja. Personal Training mit Erik Brückner ist als Zusatzleistung auf Anfrage verfügbar — unabhängig von deiner Mitgliedschaft. Angebote: Techniktraining, Hybrid Fitness Coaching, Smart Gym Training, Sportspezifisches Athletiktraining." },
+  { q: "Für welche Altersgruppe ist The Forge geeignet?", a: "The Forge ist für Menschen von 18 bis 80 Jahren konzipiert — Alltagsathleten, Vereinssportler und Freizeitsportler. Unter 18 benötigen wir eine Einverständniserklärung eines Erziehungsberechtigten." },
+  { q: "Was ist das Vorverkaufsangebot?", a: "Sichere dir jetzt deine Mitgliedschaft zum Vorverkaufspreis. Limitierte Plätze, feste Konditionen — kontaktiere uns für Details." },
 ];
 
 export default function MembershipPage() {
@@ -29,8 +28,8 @@ export default function MembershipPage() {
     <>
       <PageHero
         label="Mitgliedschaft"
-        title={<>Alles an einem Ort –<br /><span className="text-[#c19255]">maximale Flexibilität.</span></>}
-        subtitle="Performance Training, Premium-Gerätepark und Self-Check Gym. Wähle das Paket, das zu dir passt."
+        title={<>Smart Gym.<br /><span className="text-[#c19255]">Hybrid Fitness.</span></>}
+        subtitle="Das Smart Gym ist in jeder Mitgliedschaft enthalten. Hybrid Fitness erweitert dein Training um Technikkurse, S&C und Trainingsplanung."
       />
 
       {/* Plans */}

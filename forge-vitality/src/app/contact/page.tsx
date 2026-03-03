@@ -73,7 +73,7 @@ export default function ContactPage() {
                       </div>
                     ))}
                     <p className="text-[#5a5a55] text-[10px] font-light mt-1" style={{ fontFamily: "'Inter', sans-serif" }}>
-                      Self Check Gym: 05:00 – 23:00 Uhr · 365 Tage
+                      Smart Gym: 05:00 – 23:00 Uhr · 365 Tage
                     </p>
                   </div>
                 </div>
@@ -144,10 +144,11 @@ export default function ContactPage() {
                   >
                     <option value="">Bitte wählen</option>
                     <option>Probetraining</option>
+                    <option>Vorverkaufsangebot</option>
                     <option>Mitgliedschaft anfragen</option>
+                    <option>Personal Training</option>
                     <option>Physiotherapie-Termin</option>
                     <option>Allgemeine Frage</option>
-                    <option>Firmenkonditionen</option>
                   </select>
                 </div>
 

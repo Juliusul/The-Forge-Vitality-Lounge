@@ -3,23 +3,23 @@ import SectionLabel from "@/components/SectionLabel";
 const pillars = [
   {
     number: "I",
-    title: "Medizinische Nähe",
-    body: "Physiotherapie im selben Gebäude. Vom Befund zur Belastung — nahtlos. Das gibt es nicht in jedem Gym.",
+    title: "Performance Umgebung",
+    body: "ELEIKO, PRECOR, Concept2 — selektiertes Equipment für strukturiertes Krafttraining und Functional Fitness. Kein Kompromiss.",
   },
   {
     number: "II",
-    title: "Qualifizierte Begleitung",
-    body: "Unsere Coaches kommen aus Sport, Medizin und Gesundheitswissenschaften. Kompetenz ist kein Slogan.",
+    title: "Athletische Kompetenz",
+    body: "Unsere Coaches kommen aus Sportwissenschaft, Leistungssport und Athletik. Hier wird trainiert, nicht betreut.",
   },
   {
     number: "III",
-    title: "Bewusste Umgebung",
-    body: "Architektur, Licht und Akustik sind kein Zufall. Die Umgebung unterstützt Fokus — nicht Ablenkung.",
+    title: "Fokus. Kein Lärm.",
+    body: "Akustik, Licht und Raumkonzept sind auf Training ausgelegt. Keine Musik-Beschallung. Keine Ablenkung. Nur Arbeit.",
   },
   {
     number: "IV",
-    title: "Keine Masse. Klasse.",
-    body: "Limitierte Mitgliederzahl. Kleine Kursgruppen. Persönliche Aufmerksamkeit. Das ist unser Standard.",
+    title: "Anspruch statt Masse.",
+    body: "Limitierte Mitgliederzahl. Kleine Gruppen. Wer hier trainiert, will Ergebnisse — nicht Unterhaltung.",
   },
 ];
 
@@ -39,16 +39,16 @@ export default function TrustSection() {
                 fontSize: "clamp(2.8rem, 5vw, 5rem)",
               }}
             >
-              Vertrauen durch{" "}
-              <span className="text-[#c19255]">Substanz.</span>
+              Gebaut für{" "}
+              <span className="text-[#c19255]">Leistung.</span>
             </h2>
             <p
               className="text-[#8a8a82] text-[13px] leading-[1.85] font-light"
               style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
             >
-              The Forge ist nicht für jeden. Es ist für Menschen, die in ihre
-              Gesundheit investieren — mit demselben Anspruch, den sie an alles
-              andere in ihrem Leben stellen.
+              The Forge ist nicht für jeden. Es ist für Menschen, die bewusst
+              trainieren — mit demselben Anspruch an ihre Leistung, den sie an
+              alles andere in ihrem Leben stellen.
             </p>
 
             {/* Physiotherapy badge */}

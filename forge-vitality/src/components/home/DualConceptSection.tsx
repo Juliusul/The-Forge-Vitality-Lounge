@@ -23,7 +23,7 @@ export default function DualConceptSection() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#c19255]/10">
-          {/* Card 1: Hybrid Paket */}
+          {/* Card 1: Hybrid Fitness */}
           <div className="bg-[#181816] p-12 lg:p-16 group relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#c19255] to-transparent opacity-60" />
 
@@ -40,7 +40,7 @@ export default function DualConceptSection() {
               01
             </p>
 
-            <SectionLabel>Hybrid Fitness</SectionLabel>
+            <SectionLabel>Strukturiertes Training</SectionLabel>
 
             <h3
               className="text-[#f8f7f2] uppercase mb-6"
@@ -52,24 +52,24 @@ export default function DualConceptSection() {
                 letterSpacing: "-0.01em",
               }}
             >
-              Hybrid Paket
+              Hybrid Fitness
             </h3>
 
             <p
               className="text-[#8a8a82] text-[13px] leading-[1.85] font-light mb-10 max-w-md"
               style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
             >
-              Performance Training und Functional Fitness in kleinen Gruppen —
-              kombiniert mit dem vollen Zugang zum Self-Check Gym. Technik
-              Sessions, Trainingspläne und strukturierte Progression inklusive.
+              Kraft- &amp; Konditionstraining mit Langhantel, Kettlebell und
+              Eigenkörpergewicht. Technikkurse für den Einstieg, Strength &amp;
+              Conditioning für Fortgeschrittene. Kleine Gruppen, klare Struktur.
             </p>
 
             <div className="flex flex-col gap-3 mb-10">
               {[
                 "Kleine Gruppen (max. 8 Teilnehmer)",
-                "ELEIKO Functional Area",
-                "Performance Training & Technik Sessions",
-                "Quartalsweise Trainingspläne",
+                "Technikkurse & Strength Sessions",
+                "Langhantel · Kettlebell · Bodyweight",
+                "Hoher Übertrag auf Alltag & Sport",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="w-1 h-1 bg-[#c19255] flex-shrink-0 rounded-full" />
@@ -83,12 +83,12 @@ export default function DualConceptSection() {
               ))}
             </div>
 
-            <Button href="/membership" variant="outline">
-              Hybrid Paket ansehen
+            <Button href="/training" variant="outline">
+              Training ansehen
             </Button>
           </div>
 
-          {/* Card 2: Self Check Gym */}
+          {/* Card 2: Smart Gym */}
           <div className="bg-[#222220] p-12 lg:p-16 group relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#c19255]/50 to-transparent opacity-40" />
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#c19255]/4 blur-[80px]" />
@@ -118,16 +118,16 @@ export default function DualConceptSection() {
                 letterSpacing: "-0.01em",
               }}
             >
-              Self Check Gym
+              Smart Gym
             </h3>
 
             <p
               className="text-[#8a8a82] text-[13px] leading-[1.85] font-light mb-10 max-w-md relative z-10"
               style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
             >
-              PRECOR Premium Geräte. Face-ID Zugang. Eigenverantwortliches
-              Krafttraining von 05:00 bis 23:00 Uhr — 365 Tage im Jahr.
-              Ruhig, fokussiert, ungestört.
+              Freies Gerätetraining im PRECOR Premium-Gerätepark. Face-ID
+              Zugang, 05:00 bis 23:00 Uhr — 365 Tage im Jahr. Im Smart Gym
+              trainierst du eigenverantwortlich. In jeder Mitgliedschaft inklusive.
             </p>
 
             <div className="flex flex-col gap-3 mb-10 relative z-10">
@@ -135,7 +135,7 @@ export default function DualConceptSection() {
                 "PRECOR Premium Gerätepark",
                 "Face-ID Zugang · Videoüberwacht",
                 "05:00 – 23:00 Uhr · 365 Tage",
-                "WLAN & Parkplätze inklusive",
+                "In jeder Mitgliedschaft inklusive",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="w-1 h-1 bg-[#c19255] flex-shrink-0 rounded-full" />
@@ -149,8 +149,8 @@ export default function DualConceptSection() {
               ))}
             </div>
 
-            <Button href="/training#selfcheck" variant="ghost">
-              Self Check Gym
+            <Button href="/training#smartgym" variant="ghost">
+              Smart Gym entdecken
             </Button>
           </div>
         </div>

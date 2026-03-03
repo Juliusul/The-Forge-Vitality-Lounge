@@ -9,56 +9,18 @@ export const metadata: Metadata = {
 
 const coaches = [
   {
-    initials: "SM",
-    name: "Sarah Müller",
-    role: "Head Coach · Functional Training",
-    bio: "Sarah leitet das Training-Konzept bei The Forge. Ihr Hintergrund in Sportwissenschaft und Functional Range Conditioning prägt unsere methodische Tiefe. Kein Kurs bei ihr ist zufällig — jede Session hat ein Ziel.",
+    initials: "EB",
+    name: "Erik Brückner",
+    role: "Head Coach · Hybrid Fitness",
+    bio: "Erik leitet das gesamte Training-Konzept bei The Forge. Sein Hintergrund in Fitnessökonomie, Leistungssport und Kampfsport prägt die methodische Tiefe aller Kurse. Über 10 Jahre Erfahrung in der Trainingssteuerung — von Alltagsathleten bis zu Vereinssportlern.",
     credentials: [
-      "B.Sc. Sportwissenschaft, Universität Paderborn",
-      "Functional Range Conditioning (FRC) Certified",
-      "Präventionskurs-Lizenz §20 SGB V",
-      "8 Jahre Coaching-Erfahrung",
+      "Studium Fitnessökonomie (DHFPG)",
+      "Leistungssport-Hintergrund",
+      "Kampfsport-Erfahrung",
+      "10+ Jahre Coaching-Erfahrung",
+      "Spezialisierung: Hybrid Fitness, Athletiktraining, Kraft- & Konditionstraining",
     ],
-    focus: "Bewegungsmuster · Mobilität · Gruppentraining",
-  },
-  {
-    initials: "TK",
-    name: "Thomas Kraft",
-    role: "Strength & Conditioning Coach",
-    bio: "Thomas kommt aus dem Leistungssport und arbeitet heute mit Professionals, Athleten und ambitionierten Hobbyläufern. Sein Ansatz: Kraft ist keine Frage der Gene — sie ist eine Frage des Systems.",
-    credentials: [
-      "M.Sc. Bewegungswissenschaft, DSHS Köln",
-      "NSCA Certified Strength & Conditioning Specialist",
-      "Ehemaliger Leistungssportler (Leichtathletik)",
-      "Spezialisierung: Barbell Training, Athletic Development",
-    ],
-    focus: "Krafttraining · Athletik · Leistungsdiagnostik",
-  },
-  {
-    initials: "LB",
-    name: "Lena Berger",
-    role: "Mobility & Recovery Specialist",
-    bio: "Lena ist ausgebildete Physiotherapeutin und Bewegungscoach. Sie verbindet die medizinische Perspektive mit praktischer Trainingssteuerung — besonders wertvoll für Comeback-Athleten und chronisch Gestresste.",
-    credentials: [
-      "Staatlich anerkannte Physiotherapeutin",
-      "Yoga Alliance RYT-500",
-      "Breathing Coordination nach Middendorf",
-      "Spezialisierung: Rehab-to-Performance",
-    ],
-    focus: "Rehabilitation · Mobilisierung · Atemarbeit",
-  },
-  {
-    initials: "JP",
-    name: "Jan Peters",
-    role: "Cardio & Metabolic Conditioning",
-    bio: "Jan ist Triathlet und Sporttherapeut. Er bringt eine nüchterne, datengetriebene Herangehensweise an aerobe Kapazität — ohne Buzzwords. Effektiv, messbar, nachvollziehbar.",
-    credentials: [
-      "B.Sc. Sporttherapie",
-      "Triathlet (Ironman-Finisher)",
-      "Herzfrequenz-Zonen-Training Spezialist",
-      "ISAK Level 1 Anthropometrie",
-    ],
-    focus: "Ausdauer · Herzfrequenzsteuerung · Stoffwechsel",
+    focus: "Hybrid Fitness · Athletiktraining · Kraft- & Konditionstraining · Personal Training",
   },
 ];
 
@@ -68,7 +30,7 @@ export default function CoachesPage() {
       <PageHero
         label="Das Team"
         title={<>Kompetenz,<br /><span className="text-[#c19255]">kein Marketingbegriff.</span></>}
-        subtitle="Unsere Coaches kommen aus Sportwissenschaft, Physiotherapie und Leistungssport — nicht aus dem Marketing."
+        subtitle="Fitnessökonomie, Leistungssport, Kampfsport — über 10 Jahre Erfahrung in der Trainingssteuerung."
       />
 
       <section className="bg-[#0d0d0b] py-24 lg:py-36">

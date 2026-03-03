@@ -3,25 +3,11 @@ import Button from "@/components/Button";
 
 const coaches = [
   {
-    name: "Sarah Müller",
-    role: "Head Coach · Functional Training",
+    name: "Erik Brückner",
+    role: "Head Coach · Hybrid Fitness",
     bg: "bg-[#181816]",
-    initials: "SM",
-    credentials: "B.Sc. Sportwissenschaft · Functional Range Conditioning",
-  },
-  {
-    name: "Thomas Kraft",
-    role: "Strength & Conditioning",
-    bg: "bg-[#1a1a18]",
-    initials: "TK",
-    credentials: "M.Sc. Bewegungswissenschaft · NSCA CSCS",
-  },
-  {
-    name: "Lena Berger",
-    role: "Mobility & Recovery",
-    bg: "bg-[#181816]",
-    initials: "LB",
-    credentials: "Physiotherapeutin · Yoga Alliance 500h",
+    initials: "EB",
+    credentials: "Studium Fitnessökonomie (DHFPG) · Leistungssport · Kampfsport · 10+ Jahre Erfahrung",
   },
 ];
 
@@ -35,7 +21,7 @@ export default function CoachesPreview() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-16 lg:mb-20 gap-8">
           <div>
-            <SectionLabel>Das Team</SectionLabel>
+            <SectionLabel>Coaching</SectionLabel>
             <h2
               className="text-[#f8f7f2] uppercase leading-[0.9] tracking-[-0.01em]"
               style={{
@@ -44,19 +30,19 @@ export default function CoachesPreview() {
                 fontSize: "clamp(2.8rem, 6vw, 5.5rem)",
               }}
             >
-              Menschen,{" "}
-              <span className="text-[#c19255]">denen</span>
+              Kompetenz{" "}
+              <span className="text-[#c19255]">aus der</span>
               <br />
-              du vertrauen kannst.
+              Praxis.
             </h2>
           </div>
           <Button href="/coaches" variant="ghost" className="self-start sm:self-auto">
-            Alle Coaches
+            Mehr erfahren
           </Button>
         </div>
 
         {/* Coach cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#c19255]/10">
+        <div className="grid grid-cols-1 gap-px bg-[#c19255]/10 max-w-2xl">
           {coaches.map((coach) => (
             <div
               key={coach.name}

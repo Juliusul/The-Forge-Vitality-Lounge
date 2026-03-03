@@ -43,10 +43,10 @@ export default function AtmosphericSection() {
       <div className="border-t border-[#c19255]/10">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-[#c19255]/8">
           {[
-            { label: "Klima & Lüftung", detail: "Kontrolliertes Raumklima" },
-            { label: "Akustik", detail: "Fokus-optimierte Dämpfung" },
-            { label: "Equipment", detail: "Selektiert, nicht kompromittiert" },
-            { label: "Hygiene", detail: "Professioneller Standard täglich" },
+            { label: "Kleine Gruppen", detail: "Max. 8 Personen pro Kurs" },
+            { label: "Head Coach", detail: "Erik Brückner — immer dabei" },
+            { label: "Equipment", detail: "ELEIKO · PRECOR · Concept2" },
+            { label: "Smart Gym", detail: "05:00 – 23:00 · 365 Tage" },
           ].map((f) => (
             <div key={f.label} className="bg-[#181816] px-6 py-8 text-center group hover:bg-[#1e1e1c] transition-colors duration-200">
               <p

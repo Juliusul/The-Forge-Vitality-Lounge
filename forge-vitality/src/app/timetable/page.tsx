@@ -11,41 +11,36 @@ const days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samsta
 
 const schedule: Record<string, { time: string; name: string; coach: string; level: string }[]> = {
   Montag: [
-    { time: "06:30", name: "Functional Flow", coach: "Sarah M.", level: "Alle" },
-    { time: "09:00", name: "Mobility & Reset", coach: "Lena B.", level: "Alle" },
-    { time: "12:00", name: "Open Floor", coach: "Thomas K.", level: "Ab Mittel" },
-    { time: "18:00", name: "Strength Lab", coach: "Thomas K.", level: "Fortg." },
-    { time: "19:30", name: "Cardio Conditioning", coach: "Sarah M.", level: "Alle" },
+    { time: "06:30", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
+    { time: "09:00", name: "Bodyweight Technik", coach: "Erik B.", level: "Alle" },
+    { time: "18:00", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
+    { time: "19:30", name: "Barbell Beginner", coach: "Erik B.", level: "Einsteiger" },
   ],
   Dienstag: [
-    { time: "06:30", name: "Strength Lab", coach: "Thomas K.", level: "Fortg." },
-    { time: "09:00", name: "Functional Flow", coach: "Lena B.", level: "Alle" },
-    { time: "18:00", name: "Athletic Performance", coach: "Thomas K.", level: "Fortg." },
-    { time: "19:30", name: "Mobility & Reset", coach: "Lena B.", level: "Alle" },
+    { time: "06:30", name: "Bodyweight Technik", coach: "Erik B.", level: "Alle" },
+    { time: "18:00", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
+    { time: "19:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
   ],
   Mittwoch: [
-    { time: "06:30", name: "Functional Flow", coach: "Sarah M.", level: "Alle" },
-    { time: "10:00", name: "Cardio Conditioning", coach: "Sarah M.", level: "Alle" },
-    { time: "12:00", name: "Open Floor", coach: "Thomas K.", level: "Ab Mittel" },
-    { time: "18:00", name: "Functional Flow", coach: "Lena B.", level: "Alle" },
-    { time: "19:30", name: "Strength Lab", coach: "Thomas K.", level: "Fortg." },
+    { time: "06:30", name: "Barbell Beginner", coach: "Erik B.", level: "Einsteiger" },
+    { time: "09:00", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
+    { time: "18:00", name: "Bodyweight Technik", coach: "Erik B.", level: "Alle" },
+    { time: "19:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
   ],
   Donnerstag: [
-    { time: "06:30", name: "Mobility & Reset", coach: "Lena B.", level: "Alle" },
-    { time: "09:00", name: "Athletic Performance", coach: "Thomas K.", level: "Fortg." },
-    { time: "18:00", name: "Cardio Conditioning", coach: "Sarah M.", level: "Alle" },
-    { time: "19:30", name: "Functional Flow", coach: "Sarah M.", level: "Alle" },
+    { time: "06:30", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
+    { time: "18:00", name: "Barbell Beginner", coach: "Erik B.", level: "Einsteiger" },
+    { time: "19:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
   ],
   Freitag: [
-    { time: "06:30", name: "Strength Lab", coach: "Thomas K.", level: "Fortg." },
-    { time: "09:00", name: "Functional Flow", coach: "Lena B.", level: "Alle" },
-    { time: "12:00", name: "Open Floor", coach: "Sarah M.", level: "Ab Mittel" },
-    { time: "18:00", name: "Mobility & Reset", coach: "Lena B.", level: "Alle" },
+    { time: "06:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
+    { time: "09:00", name: "Bodyweight Technik", coach: "Erik B.", level: "Alle" },
+    { time: "18:00", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
   ],
   Samstag: [
-    { time: "08:00", name: "Functional Flow", coach: "Sarah M.", level: "Alle" },
-    { time: "09:30", name: "Strength Lab", coach: "Thomas K.", level: "Fortg." },
-    { time: "11:00", name: "Mobility & Reset", coach: "Lena B.", level: "Alle" },
+    { time: "08:00", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
+    { time: "09:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
+    { time: "11:00", name: "Barbell Beginner", coach: "Erik B.", level: "Einsteiger" },
   ],
 };
 
@@ -55,7 +50,7 @@ export default function TimetablePage() {
       <PageHero
         label="Kursplan"
         title={<>Deine Woche.<br /><span className="text-[#c19255]">Strukturiert.</span></>}
-        subtitle="Alle Kurse auf einen Blick. Buche deinen Platz rechtzeitig — Kursgrößen sind bewusst klein gehalten."
+        subtitle="Technikkurse und Strength & Conditioning — alle Sessions auf einen Blick. Max. 8 Teilnehmer pro Kurs."
       />
 
       <section className="bg-[#0d0d0b] py-24 lg:py-36">
@@ -122,7 +117,7 @@ export default function TimetablePage() {
           {/* Note */}
           <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <p className="text-[#5a5a55] text-[11px] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Kursänderungen werden 24h im Voraus via App kommuniziert. Max. 8–12 Personen pro Kurs.
+              Kursänderungen werden 24h im Voraus kommuniziert. Max. 8 Teilnehmer pro Kurs. Alle Kurse mit Erik Brückner.
             </p>
             <Button href="/contact" variant="outline">
               Platz reservieren

@@ -19,7 +19,7 @@ export default function FinalCTA() {
             className="text-[#c19255] text-[10px] tracking-[0.25em] uppercase font-semibold"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            Bereit?
+            Vorverkauf
           </p>
           <div className="w-5 h-px bg-[#c19255] flex-shrink-0" />
         </div>
@@ -33,23 +33,23 @@ export default function FinalCTA() {
             fontSize: "clamp(3.5rem, 9vw, 9rem)",
           }}
         >
-          Dein erstes{" "}
-          <span className="text-[#c19255]">Training</span>
+          Jetzt zum{" "}
+          <span className="text-[#c19255]">Vorverkauf</span>
           <br />
-          wartet.
+          sichern.
         </h2>
 
         <p
           className="text-[#8a8a82] text-[14px] font-light leading-relaxed max-w-md mx-auto mb-14"
           style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
         >
-          Komm vorbei für eine Führung. Kein Druck, keine Verträge beim ersten Besuch.
-          Überzeug dich selbst von der Qualität.
+          The Forge öffnet bald. Sichere dir jetzt deine Mitgliedschaft zum Vorverkaufspreis —
+          limitierte Plätze, keine Warteliste.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button href="/contact" variant="primary">
-            Kostenloses Probetraining
+            Vorverkaufsangebot sichern
           </Button>
           <Button href="/membership" variant="ghost">
             Mitgliedschaft ansehen

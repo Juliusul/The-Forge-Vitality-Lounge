@@ -35,7 +35,7 @@ export default function HeroSection() {
               className="text-[#c19255] text-[11px] tracking-[0.22em] uppercase font-medium"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Hybrid Fitness · Krafttraining · Bad Lippspringe
+              Hybrid Fitness Studio · Bad Lippspringe
             </span>
           </div>
 
@@ -48,9 +48,9 @@ export default function HeroSection() {
               fontSize: "clamp(4.5rem, 12vw, 11rem)",
             }}
           >
-            STÄRKE.<br />
-            <span className="text-[#c19255]">PRÄZISION.</span><br />
-            LEISTUNG.
+            TRAIN.<br />
+            <span className="text-[#c19255]">PERFORM.</span><br />
+            REPEAT.
           </h1>
 
           {/* Subtext */}
@@ -58,8 +58,9 @@ export default function HeroSection() {
             className="text-[#8a8a82] text-[15px] font-light leading-relaxed max-w-xl mb-12"
             style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
           >
-            Alles an einem Ort — Hybrid Fitness, Krafttraining und ein Self-Check
-            Gym mit maximaler Flexibilität. Dein Training, dein Tempo.
+            Functional Fitness, Kraft- &amp; Konditionstraining und ein Smart Gym —
+            alles an einem Ort. Langhantel, Kettlebell, Eigenkörpergewicht.
+            Strukturiert. Effizient. Leistungsorientiert.
           </p>
 
           {/* CTAs */}
@@ -84,22 +85,32 @@ export default function HeroSection() {
 
       {/* Bottom stats bar */}
       <div className="relative z-10 bg-[#181816]/90 backdrop-blur-sm border-t border-[#c19255]/15">
-        <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-5 grid grid-cols-2 md:grid-cols-4 divide-x divide-[#c19255]/15">
+        <div className="max-w-[1440px] mx-auto px-8 lg:px-16 grid grid-cols-2 md:grid-cols-4">
           {[
-            { value: "2", label: "Trainingswelten" },
-            { value: "20+", label: "Kurse / Woche" },
-            { value: "800 m²", label: "Performance Fläche" },
-            { value: "Physio", label: "Im selben Haus" },
-          ].map((s) => (
-            <div key={s.label} className="px-6 first:pl-0 last:pr-0 py-1 text-center md:text-left">
+            { id: "a", value: "Max. 8", label: <>Teilnehmer<br />pro Kurs</> },
+            { id: "b", value: "3", label: <>Trainings-<br />modalitäten</> },
+            { id: "c", value: "Smart Gym", label: <>05–23 Uhr<br />inklusive</> },
+            { id: "d", value: "Physio", label: <>Im selben<br />Haus</> },
+          ].map((s, i) => (
+            <div
+              key={s.id}
+              className={[
+                "py-5 px-5 md:px-6 text-center md:text-left border-[#c19255]/15",
+                i % 2 === 0 ? "border-r md:border-r-0" : "",
+                i < 2 ? "border-b md:border-b-0" : "",
+                i > 0 ? "md:border-l" : "",
+                i === 0 ? "md:pl-0" : "",
+                i === 3 ? "md:pr-0" : "",
+              ].join(" ")}
+            >
               <p
                 className="text-[#f8f7f2] leading-none mb-1 uppercase"
-                style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.6rem" }}
+                style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "clamp(1.2rem, 4vw, 1.6rem)" }}
               >
                 {s.value}
               </p>
               <p
-                className="text-[#5a5a55] text-[10px] tracking-[0.16em] uppercase font-medium"
+                className="text-[#5a5a55] text-[10px] tracking-[0.16em] uppercase font-medium leading-relaxed"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {s.label}
