@@ -9,6 +9,9 @@ export const metadata: Metadata = {
 };
 
 const optionalModules = [
+  { name: "Technikkurse & S&C", price: "+ 10 €/Monat", detail: "Kettlebell · Bodyweight · Barbell · S&C Sessions" },
+  { name: "10er Karte Technikkurse", price: "80,00 €", detail: "10 Einheiten · frei einlösbar" },
+  { name: "10er Karte Hybridkurse", price: "150,00 €", detail: "10 Einheiten · frei einlösbar" },
   { name: "Personal Training", price: "auf Anfrage", detail: "Individuell buchbar" },
   { name: "Athletiktraining", price: "auf Anfrage", detail: "Für Vereine & Einzelsportler" },
   { name: "Geräteeinweisung", price: "29,90 €", detail: "Pro Termin" },

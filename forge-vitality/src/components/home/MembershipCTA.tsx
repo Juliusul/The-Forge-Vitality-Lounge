@@ -20,7 +20,7 @@ const plans = [
     period: "/Monat",
     features: [
       "Alles aus Smart Gym",
-      "Technikkurse & S&C Sessions",
+      "ELEIKO Functional Area",
       "Kleine Gruppen (max. 8)",
       "Trainingsplan alle 3 Monate",
     ],

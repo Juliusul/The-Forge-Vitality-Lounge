@@ -28,11 +28,9 @@ const smartGymFeatures = [
 
 const hybridFeatures = [
   "Alles aus Smart Gym",
-  "Technikkurse (Kettlebell, Bodyweight, Barbell)",
-  "Strength & Conditioning Sessions",
+  "ELEIKO Functional Area",
   "Kleine Gruppen (max. 8 Teilnehmer)",
   "Trainingsplan alle 3 Monate",
-  "ELEIKO Functional Area",
 ];
 
 export default function PricingCards() {
