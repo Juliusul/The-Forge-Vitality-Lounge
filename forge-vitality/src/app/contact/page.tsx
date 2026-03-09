@@ -29,7 +29,7 @@ export default function ContactPage() {
                     Adresse
                   </p>
                   <address className="not-italic text-[#f8f7f2] font-light leading-relaxed" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px" }}>
-                    Musterstraße 1<br />
+                    Auguste-Viktoria-Allee 19a<br />
                     33175 Bad Lippspringe<br />
                     Deutschland
                   </address>
@@ -39,8 +39,8 @@ export default function ContactPage() {
                   <p className="text-[#c19255] text-[10px] tracking-[0.2em] uppercase font-semibold mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Telefon
                   </p>
-                  <a href="tel:+4952529999999" className="text-[#f8f7f2] hover:text-[#c19255] transition-colors font-light" style={{ fontFamily: "'Inter', sans-serif", fontSize: "18px" }}>
-                    +49 5252 999 999
+                  <a href="tel:+4952549362602" className="text-[#f8f7f2] hover:text-[#c19255] transition-colors font-light" style={{ fontFamily: "'Inter', sans-serif", fontSize: "18px" }}>
+                    05254 / 9362602
                   </a>
                 </div>
 
@@ -48,8 +48,8 @@ export default function ContactPage() {
                   <p className="text-[#c19255] text-[10px] tracking-[0.2em] uppercase font-semibold mb-3" style={{ fontFamily: "'Inter', sans-serif" }}>
                     E-Mail
                   </p>
-                  <a href="mailto:info@theforge-vitality.de" className="text-[#f8f7f2] hover:text-[#c19255] transition-colors font-light" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px" }}>
-                    info@theforge-vitality.de
+                  <a href="mailto:mitgliederservice@vitality-lounge.de" className="text-[#f8f7f2] hover:text-[#c19255] transition-colors font-light" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px" }}>
+                    mitgliederservice@vitality-lounge.de
                   </a>
                 </div>
 
@@ -162,6 +162,26 @@ export default function ContactPage() {
                     style={{ fontFamily: "'Inter', sans-serif" }}
                     placeholder="Wie können wir helfen?"
                   />
+                </div>
+
+                <div className="pt-2">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      required
+                      className="mt-1 accent-[#c19255] cursor-pointer"
+                    />
+                    <span
+                      className="text-[#8a8a82] text-[11px] leading-relaxed font-light"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
+                      Ich habe die{" "}
+                      <a href="/datenschutz" className="text-[#c19255] hover:underline">
+                        Datenschutzerklärung
+                      </a>{" "}
+                      gelesen und stimme der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage zu. *
+                    </span>
+                  </label>
                 </div>
 
                 <div className="pt-2">

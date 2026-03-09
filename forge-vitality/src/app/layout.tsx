@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import "./fonts.css";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
+import TrackingScripts from "@/components/TrackingScripts";
 
 export const metadata: Metadata = {
   title: "The Forge by Vitality Lounge – Hybrid Fitness & Krafttraining Bad Lippspringe",
@@ -22,18 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@300;400;500&family=Inter:wght@200;300;400;500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+      <head />
       <body className="antialiased">
         <Nav />
         <main>{children}</main>
         <Footer />
+        <CookieConsent />
+        <TrackingScripts />
       </body>
     </html>
   );

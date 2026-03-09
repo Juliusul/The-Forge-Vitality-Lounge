@@ -77,10 +77,10 @@ export default function Footer() {
               Adresse
             </p>
             <address className="not-italic flex flex-col gap-2 text-[11px] text-[#5a5a55] font-light leading-loose" style={{ fontFamily: "'Inter', sans-serif" }}>
-              <span>Musterstraße 1</span>
+              <span>Auguste-Viktoria-Allee 19a</span>
               <span>33175 Bad Lippspringe</span>
-              <a href="tel:+4952529999999" className="hover:text-[#c19255] transition-colors mt-2">+49 5252 999 999</a>
-              <a href="mailto:info@theforge-vitality.de" className="hover:text-[#c19255] transition-colors">info@theforge-vitality.de</a>
+              <a href="tel:+4952549362602" className="hover:text-[#c19255] transition-colors mt-2">05254 / 9362602</a>
+              <a href="mailto:mitgliederservice@vitality-lounge.de" className="hover:text-[#c19255] transition-colors">mitgliederservice@vitality-lounge.de</a>
             </address>
           </div>
         </div>
