@@ -14,14 +14,14 @@ const kurse = [
     duration: "75 min",
     frequency: "2× / Woche",
     level: "Alle Level",
-    description: "Barbell Lifts im Mittelpunkt — Squat, Deadlift, Press und Bench. Ergänzungsübungen für nachhaltigen Kraftaufbau. Strukturiert, progressiv, leistungsorientiert.",
+    description: "Barbell Lifts im Mittelpunkt — Squat, Deadlift, Press und Bench. Ergänzt durch Kurzhantel- und Körpergewichtsübungen für nachhaltigen Kraftaufbau. Strukturiert, progressiv, leistungsorientiert.",
   },
   {
     name: "Conditioning",
     duration: "60 min",
     frequency: "2–3× / Woche",
     level: "Alle Level",
-    description: "Gemischte Modalitäten im Circuit-, AMRAP- und EMOM-Stil. Ausdauer, Kraft und Koordination — kombiniert in leistungsorientierten Workouts.",
+    description: "Gemischte Modalitäten im Circuit-, AMRAP- und EMOM-Stil — Circuit: Stationsbasiertes Training ohne Pause, AMRAP: So viele Runden wie möglich in einer festgelegten Zeit, EMOM: Jede Minute eine neue Aufgabe. Ausdauer, Kraft und Koordination kombiniert.",
   },
 ];
 

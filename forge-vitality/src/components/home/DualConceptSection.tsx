@@ -61,7 +61,7 @@ export default function DualConceptSection() {
             >
               Strength-Kurse rund um die Langhantel und Conditioning Workouts
               mit gemischten Modalitäten — Circuit, AMRAP, EMOM.
-              Kleine Gruppen, klare Struktur.
+              Kleine Gruppen, klare Struktur. Kettlebell- &amp; Bodyweight-Kurse folgen in Kürze.
             </p>
 
             <div className="flex flex-col gap-3 mb-10">
