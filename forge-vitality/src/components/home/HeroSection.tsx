@@ -8,8 +8,8 @@ export default function HeroSection() {
       {/* Background Image — kettlebell group training */}
       <div className="absolute inset-0">
         <Image
-          src="/img-hero-kettlebell.jpg"
-          alt="The Forge Training"
+          src="/img-hero-forge.jpg"
+          alt="The Forge Hybrid Fitness Bad Lippspringe"
           fill
           className="object-cover object-center"
           priority

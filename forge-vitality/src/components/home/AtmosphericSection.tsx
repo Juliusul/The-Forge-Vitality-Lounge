@@ -6,8 +6,8 @@ export default function AtmosphericSection() {
       {/* Full-bleed image block */}
       <div className="relative h-[60vh] lg:h-[80vh] flex items-center justify-center">
         <Image
-          src="/img-barbell.jpg"
-          alt="The Forge Performance Training"
+          src="/img-strength-conditioning.jpg"
+          alt="The Forge Strength & Conditioning Bad Lippspringe"
           fill
           className="object-cover object-center"
           quality={90}

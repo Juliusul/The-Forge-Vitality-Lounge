@@ -1,4 +1,5 @@
 import HeroSection from "@/components/home/HeroSection";
+import VideoSection from "@/components/home/VideoSection";
 import DualConceptSection from "@/components/home/DualConceptSection";
 import TrustSection from "@/components/home/TrustSection";
 import CoachesPreview from "@/components/home/CoachesPreview";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <VideoSection />
       <DualConceptSection />
       <TrustSection />
       <CoachesPreview />
