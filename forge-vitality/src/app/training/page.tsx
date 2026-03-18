@@ -101,8 +101,8 @@ export default function TrainingPage() {
             >
               Demnächst
             </span>
-            <p className="text-[#5a5a55] text-[11px] font-light leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Kettlebell- &amp; Bodyweight-Technikkurse folgen, sobald die entsprechenden Zertifizierungen abgeschlossen sind.
+            <p className="text-[#8a8a82] text-[13px] font-light leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+              Kettlebell- &amp; Bodyweight-Technikkurse folgen in Kürze.
             </p>
           </div>
 
