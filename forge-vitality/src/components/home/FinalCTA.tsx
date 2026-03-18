@@ -33,23 +33,21 @@ export default function FinalCTA() {
             fontSize: "clamp(3.5rem, 9vw, 9rem)",
           }}
         >
-          Jetzt zum{" "}
-          <span className="text-[#c19255]">Vorverkauf</span>
-          <br />
-          sichern.
+          Dein Platz.{" "}
+          <span className="text-[#c19255]">Dein Preis.</span>
         </h2>
 
         <p
           className="text-[#8a8a82] text-[14px] font-light leading-relaxed max-w-md mx-auto mb-14"
           style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
         >
-          The Forge öffnet bald. Sichere dir jetzt deine Mitgliedschaft zum Vorverkaufspreis —
-          limitierte Plätze, keine Warteliste.
+          The Forge öffnet bald. Sichere dir jetzt deine Mitgliedschaft zum
+          Vorverkaufspreis — limitierte Plätze, feste Konditionen.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button href="/contact" variant="primary">
-            Vorverkaufsangebot sichern
+            Vorverkaufsangebot anfragen
           </Button>
           <Button href="/membership" variant="ghost">
             Mitgliedschaft ansehen
@@ -59,11 +57,11 @@ export default function FinalCTA() {
         {/* Contact strip */}
         <div className="mt-20 pt-10 border-t border-[#c19255]/10 flex flex-col sm:flex-row items-center justify-center gap-8">
           <a
-            href="tel:+4952529999999"
+            href="tel:+4952529776745"
             className="text-[#8a8a82] hover:text-[#c19255] text-[11px] tracking-[0.16em] font-light transition-colors"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            +49 5252 999 999
+            052529776745
           </a>
           <div className="hidden sm:block w-px h-4 bg-[#c19255]/20" />
           <a
@@ -78,7 +76,7 @@ export default function FinalCTA() {
             className="text-[#8a8a82] text-[11px] tracking-[0.16em] font-light"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            Musterstraße 1, 33175 Bad Lippspringe
+            Auguste-Viktoria-Allee 19a, 33175 Bad Lippspringe
           </span>
         </div>
       </div>

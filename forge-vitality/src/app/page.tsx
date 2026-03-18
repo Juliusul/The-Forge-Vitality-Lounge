@@ -4,6 +4,7 @@ import TrustSection from "@/components/home/TrustSection";
 import CoachesPreview from "@/components/home/CoachesPreview";
 import MembershipCTA from "@/components/home/MembershipCTA";
 import AtmosphericSection from "@/components/home/AtmosphericSection";
+import InstagramFeed from "@/components/home/InstagramFeed";
 import FinalCTA from "@/components/home/FinalCTA";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <CoachesPreview />
       <AtmosphericSection />
       <MembershipCTA />
+      <InstagramFeed />
       <FinalCTA />
     </>
   );

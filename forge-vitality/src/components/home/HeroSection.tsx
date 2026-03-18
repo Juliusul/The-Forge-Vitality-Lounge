@@ -80,6 +80,23 @@ export default function HeroSection() {
               Training ansehen
             </Link>
           </div>
+
+          {/* Vorverkauf Banner */}
+          <div className="mt-8 border border-[#c19255]/25 bg-[#181816]/60 backdrop-blur-sm px-6 py-4 inline-flex items-center gap-4">
+            <span
+              className="text-[#c19255] text-[9px] tracking-[0.22em] uppercase font-semibold flex-shrink-0"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Coming Soon
+            </span>
+            <div className="w-px h-4 bg-[#c19255]/30 flex-shrink-0" />
+            <span
+              className="text-[#f8f7f2] text-[12px] font-light"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Vorverkaufsangebot sichern — limitierte Plätze zum Eröffnungspreis
+            </span>
+          </div>
         </div>
       </div>
 
