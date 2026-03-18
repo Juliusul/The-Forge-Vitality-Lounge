@@ -49,16 +49,6 @@ const services = [
       "Behandlung und Rehabilitation sportbedingter Verletzungen — von der Akutphase bis zur Rückkehr in den Sport. In direktem Austausch mit unseren Coaches.",
   },
   {
-    title: "Kryosauna & Kältetherapie",
-    description:
-      "Schmerzreduktion und Regeneration durch Kältetherapie bis -180°C. Wirksam bei Gelenkentzündungen, Rheuma und zur Stoffwechselanregung.",
-  },
-  {
-    title: "Skillcourt-Training",
-    description:
-      "Neurologisches und motorisches Training zur Remobilisation. Gezieltes Beweglichkeitstraining unter physiotherapeutischer Betreuung.",
-  },
-  {
     title: "Manuelle Lymphdrainage",
     description:
       "Förderung des Abtransports von Gewebsflüssigkeit durch schonende manuelle Techniken. Besonders wirksam nach Operationen und bei Lymphstauungen.",
@@ -72,6 +62,18 @@ const services = [
     title: "CMD",
     description:
       "Craniomandibuläre Dysfunktion — Kiefergelenksbehandlung bei Kieferschmerzen, Knackgeräuschen, Mundöffnungseinschränkung, Kopfschmerzen und Schwindel.",
+  },
+  {
+    title: "Kryosauna & Kältetherapie",
+    description:
+      "Schmerzreduktion und Regeneration durch Kältetherapie bis -180°C. Wirksam bei Gelenkentzündungen, Rheuma und zur Stoffwechselanregung.",
+    location: "Schloss Neuhaus",
+  },
+  {
+    title: "Skillcourt-Training",
+    description:
+      "Neurologisches und motorisches Training zur Remobilisation. Gezieltes Beweglichkeitstraining unter physiotherapeutischer Betreuung.",
+    location: "Schloss Neuhaus",
   },
 ];
 
@@ -274,17 +276,27 @@ export default function PhysiotherapyPage() {
                 key={s.title}
                 className="bg-[#181816] p-8 hover:bg-[#1e1e1c] transition-colors group"
               >
-                <h3
-                  className="text-[#f8f7f2] uppercase mb-3 group-hover:text-[#c19255] transition-colors"
-                  style={{
-                    fontFamily: "'Barlow Condensed', sans-serif",
-                    fontWeight: 700,
-                    fontSize: "1.1rem",
-                    letterSpacing: "0.04em",
-                  }}
-                >
-                  {s.title}
-                </h3>
+                <div className="flex items-start justify-between gap-2 mb-3">
+                  <h3
+                    className="text-[#f8f7f2] uppercase group-hover:text-[#c19255] transition-colors"
+                    style={{
+                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontWeight: 700,
+                      fontSize: "1.1rem",
+                      letterSpacing: "0.04em",
+                    }}
+                  >
+                    {s.title}
+                  </h3>
+                  {"location" in s && (
+                    <span
+                      className="text-[#c19255] text-[8px] tracking-[0.16em] uppercase font-semibold border border-[#c19255]/30 px-2 py-0.5 flex-shrink-0 mt-0.5"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
+                      {s.location}
+                    </span>
+                  )}
+                </div>
                 <div className="h-px w-6 bg-[#c19255]/30 mb-4 group-hover:w-10 group-hover:bg-[#c19255]/60 transition-all duration-300" />
                 <p
                   className="text-[#8a8a82] text-[12px] leading-relaxed font-light"
@@ -309,6 +321,9 @@ export default function PhysiotherapyPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             <div>
               <SectionLabel>Schmerzreduktion & Regeneration</SectionLabel>
+              <p className="text-[#c19255] text-[9px] tracking-[0.2em] uppercase font-semibold mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Nur am Standort Schloss Neuhaus
+              </p>
               <h2
                 id="kryo-heading"
                 className="text-[#f8f7f2] uppercase leading-[0.9] tracking-[-0.01em] mb-8"
@@ -353,6 +368,9 @@ export default function PhysiotherapyPage() {
 
             <div>
               <SectionLabel>Neurologisch & Motorisch</SectionLabel>
+              <p className="text-[#c19255] text-[9px] tracking-[0.2em] uppercase font-semibold mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+                Nur am Standort Schloss Neuhaus
+              </p>
               <h2
                 className="text-[#f8f7f2] uppercase leading-[0.9] tracking-[-0.01em] mb-8"
                 style={{
