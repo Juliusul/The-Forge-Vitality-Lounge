@@ -5,17 +5,24 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Training – The Forge by Vitality Lounge",
-  description: "Hybrid Fitness, Functional Fitness und Smart Gym in Bad Lippspringe. Technikkurse, Strength & Conditioning und Personal Training.",
+  description: "Strength & Conditioning in kleinen Gruppen — Barbell Lifts, Circuit, AMRAP, EMOM. Smart Gym mit PRECOR Geräten. Hybrid Fitness in Bad Lippspringe.",
 };
 
-const technikkurse = [
-  { name: "Kettlebell Technik", duration: "60 min", level: "Alle Level", description: "Grundlagen und Progressionen im Kettlebell-Training. Swing, Clean, Press, Snatch — saubere Technik als Fundament für Leistung." },
-  { name: "Bodyweight Technik", duration: "60 min", level: "Alle Level", description: "Eigenkörpergewichtstraining mit System. Pull-Ups, Dips, Pistol Squats und Handstand-Progressionen — funktionelle Kraft ohne Geräte." },
-  { name: "Barbell Beginner", duration: "60 min", level: "Einsteiger", description: "Langhanteltraining von Grund auf. Squat, Deadlift, Press und Bench — sichere Technik für nachhaltigen Kraftaufbau." },
-];
-
-const scSessions = [
-  { name: "Strength & Conditioning", duration: "75 min", level: "Ab Mittelstufe", description: "Strukturiertes Kraft- und Konditionstraining. Langhantel, Kettlebell und Eigenkörpergewicht — kombiniert in leistungsorientierten Sessions." },
+const kurse = [
+  {
+    name: "Strength",
+    duration: "75 min",
+    frequency: "2× / Woche",
+    level: "Alle Level",
+    description: "Barbell Lifts im Mittelpunkt — Squat, Deadlift, Press und Bench. Ergänzungsübungen für nachhaltigen Kraftaufbau. Strukturiert, progressiv, leistungsorientiert.",
+  },
+  {
+    name: "Conditioning",
+    duration: "60 min",
+    frequency: "2–3× / Woche",
+    level: "Alle Level",
+    description: "Gemischte Modalitäten im Circuit-, AMRAP- und EMOM-Stil. Ausdauer, Kraft und Koordination — kombiniert in leistungsorientierten Workouts.",
+  },
 ];
 
 const ptServices = [
@@ -30,11 +37,11 @@ export default function TrainingPage() {
     <>
       <PageHero
         label="Training"
-        title={<>Drei Modalitäten.<br /><span className="text-[#c19255]">Ein System.</span></>}
-        subtitle="Technikkurse, Strength & Conditioning und ein Smart Gym — alles unter einem Dach. Functional Fitness mit Struktur."
+        title={<>Zwei Kurse.<br /><span className="text-[#c19255]">Ein System.</span></>}
+        subtitle="Strength & Conditioning in kleinen Gruppen — und ein Smart Gym für eigenverantwortliches Training. Alles unter einem Dach."
       />
 
-      {/* Technikkurse Section */}
+      {/* Kursangebot Section */}
       <section className="bg-[#0d0d0b] py-24 lg:py-36">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <SectionLabel>Hybrid Fitness Kurse</SectionLabel>
@@ -46,22 +53,22 @@ export default function TrainingPage() {
               fontSize: "clamp(2.5rem, 5vw, 5rem)",
             }}
           >
-            Technikkurse
+            Kursangebot
           </h2>
           <p className="text-[#8a8a82] text-[13px] leading-[1.85] font-light mb-16 max-w-2xl" style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}>
-            Saubere Technik ist die Grundlage für langfristigen Fortschritt. Unsere Technikkurse vermitteln
-            fundamentale Bewegungsmuster — in kleinen Gruppen mit maximal 8 Teilnehmern.
+            Zwei Kursformate — klar strukturiert, leistungsorientiert. Strength rund um die Barbell Lifts,
+            Conditioning mit gemischten Modalitäten. Kleine Gruppen, max. 8 Teilnehmer.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#c19255]/10">
-            {technikkurse.map((c) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#c19255]/10">
+            {kurse.map((c) => (
               <div key={c.name} className="bg-[#181816] p-8 hover:bg-[#1e1e1c] transition-colors duration-300 group">
                 <h3
                   className="text-[#f8f7f2] uppercase mb-3 group-hover:text-[#c19255] transition-colors"
                   style={{
                     fontFamily: "'Barlow Condensed', sans-serif",
                     fontWeight: 700,
-                    fontSize: "1.15rem",
+                    fontSize: "1.5rem",
                     letterSpacing: "0.04em",
                   }}
                 >
@@ -70,6 +77,9 @@ export default function TrainingPage() {
                 <div className="flex gap-3 mb-4">
                   <span className="text-[#c19255] text-[10px] tracking-[0.18em] uppercase font-semibold" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {c.duration}
+                  </span>
+                  <span className="text-[#c19255]/50 text-[10px] tracking-[0.18em] uppercase font-semibold" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    {c.frequency}
                   </span>
                   <span className="text-[#5a5a55] text-[10px] tracking-[0.14em] uppercase font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {c.level}
@@ -83,54 +93,17 @@ export default function TrainingPage() {
             ))}
           </div>
 
-          {/* Strength & Conditioning */}
-          <div className="mt-16">
-            <SectionLabel>Leistungsorientiertes Training</SectionLabel>
-            <h2
-              className="text-[#f8f7f2] uppercase leading-[0.9] tracking-[-0.01em] mb-6"
-              style={{
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(2.5rem, 5vw, 5rem)",
-              }}
+          {/* Demnächst Teaser */}
+          <div className="mt-8 border border-[#c19255]/15 bg-[#181816]/50 px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <span
+              className="text-[#c19255] text-[9px] tracking-[0.22em] uppercase font-semibold flex-shrink-0"
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Strength &{" "}
-              <span className="text-[#c19255]">Conditioning</span>
-            </h2>
-            <p className="text-[#8a8a82] text-[13px] leading-[1.85] font-light mb-12 max-w-2xl" style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}>
-              75-Minuten-Sessions für Fortgeschrittene. Langhantel, Kettlebell und Eigenkörpergewicht —
-              kombiniert in strukturierten Trainingsblöcken mit klarer Progression.
+              Demnächst
+            </span>
+            <p className="text-[#5a5a55] text-[11px] font-light leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+              Kettlebell- &amp; Bodyweight-Technikkurse folgen, sobald die entsprechenden Zertifizierungen abgeschlossen sind.
             </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#c19255]/10">
-              {scSessions.map((c) => (
-                <div key={c.name} className="bg-[#181816] p-8 hover:bg-[#1e1e1c] transition-colors duration-300 group">
-                  <h3
-                    className="text-[#f8f7f2] uppercase mb-3 group-hover:text-[#c19255] transition-colors"
-                    style={{
-                      fontFamily: "'Barlow Condensed', sans-serif",
-                      fontWeight: 700,
-                      fontSize: "1.15rem",
-                      letterSpacing: "0.04em",
-                    }}
-                  >
-                    {c.name}
-                  </h3>
-                  <div className="flex gap-3 mb-4">
-                    <span className="text-[#c19255] text-[10px] tracking-[0.18em] uppercase font-semibold" style={{ fontFamily: "'Inter', sans-serif" }}>
-                      {c.duration}
-                    </span>
-                    <span className="text-[#5a5a55] text-[10px] tracking-[0.14em] uppercase font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-                      {c.level}
-                    </span>
-                  </div>
-                  <div className="h-px w-6 bg-[#c19255]/40 mb-4 group-hover:w-10 group-hover:bg-[#c19255]/70 transition-all duration-300" />
-                  <p className="text-[#8a8a82] text-[12px] leading-relaxed font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    {c.description}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="mt-12">

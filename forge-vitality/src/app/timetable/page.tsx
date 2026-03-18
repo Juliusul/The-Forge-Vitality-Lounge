@@ -11,36 +11,24 @@ const days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samsta
 
 const schedule: Record<string, { time: string; name: string; coach: string; level: string }[]> = {
   Montag: [
-    { time: "06:30", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
-    { time: "09:00", name: "Bodyweight Technik", coach: "Erik B.", level: "Alle" },
-    { time: "18:00", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
-    { time: "19:30", name: "Barbell Beginner", coach: "Erik B.", level: "Einsteiger" },
+    { time: "18:00", name: "Strength", coach: "Erik B.", level: "Alle" },
+    { time: "19:30", name: "Conditioning", coach: "Erik B.", level: "Alle" },
   ],
   Dienstag: [
-    { time: "06:30", name: "Bodyweight Technik", coach: "Erik B.", level: "Alle" },
-    { time: "18:00", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
-    { time: "19:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
+    { time: "06:30", name: "Conditioning", coach: "Enrico B.", level: "Alle" },
   ],
   Mittwoch: [
-    { time: "06:30", name: "Barbell Beginner", coach: "Erik B.", level: "Einsteiger" },
-    { time: "09:00", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
-    { time: "18:00", name: "Bodyweight Technik", coach: "Erik B.", level: "Alle" },
-    { time: "19:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
+    { time: "18:00", name: "Strength", coach: "Erik B.", level: "Alle" },
+    { time: "19:30", name: "Conditioning", coach: "Erik B.", level: "Alle" },
   ],
   Donnerstag: [
-    { time: "06:30", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
-    { time: "18:00", name: "Barbell Beginner", coach: "Erik B.", level: "Einsteiger" },
-    { time: "19:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
+    { time: "06:30", name: "Conditioning", coach: "Erik B.", level: "Alle" },
   ],
   Freitag: [
-    { time: "06:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
-    { time: "09:00", name: "Bodyweight Technik", coach: "Erik B.", level: "Alle" },
-    { time: "18:00", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
+    { time: "18:00", name: "Conditioning", coach: "Enrico B.", level: "Alle" },
   ],
   Samstag: [
-    { time: "08:00", name: "Kettlebell Technik", coach: "Erik B.", level: "Alle" },
-    { time: "09:30", name: "S&C", coach: "Erik B.", level: "Ab Mittel" },
-    { time: "11:00", name: "Barbell Beginner", coach: "Erik B.", level: "Einsteiger" },
+    { time: "09:00", name: "Strength", coach: "Erik B.", level: "Alle" },
   ],
 };
 
@@ -50,7 +38,7 @@ export default function TimetablePage() {
       <PageHero
         label="Kursplan"
         title={<>Deine Woche.<br /><span className="text-[#c19255]">Strukturiert.</span></>}
-        subtitle="Technikkurse und Strength & Conditioning — alle Sessions auf einen Blick. Max. 8 Teilnehmer pro Kurs."
+        subtitle="Strength & Conditioning — alle Sessions auf einen Blick. Max. 8 Teilnehmer pro Kurs."
       />
 
       <section className="bg-[#0d0d0b] py-24 lg:py-36">
@@ -114,10 +102,28 @@ export default function TimetablePage() {
             </div>
           </div>
 
+          {/* Legend */}
+          <div className="mt-8 flex gap-6">
+            {[
+              { label: "Strength", detail: "75 min · Barbell Lifts" },
+              { label: "Conditioning", detail: "60 min · Circuit · AMRAP · EMOM" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-2">
+                <div className="w-1.5 h-1.5 bg-[#c19255] rounded-full flex-shrink-0" />
+                <span className="text-[#f8f7f2] text-[10px] tracking-[0.12em] uppercase font-semibold" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  {item.label}
+                </span>
+                <span className="text-[#5a5a55] text-[10px] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  — {item.detail}
+                </span>
+              </div>
+            ))}
+          </div>
+
           {/* Note */}
-          <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <p className="text-[#5a5a55] text-[11px] font-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-              Kursänderungen werden 24h im Voraus kommuniziert. Max. 8 Teilnehmer pro Kurs. Alle Kurse mit Erik Brückner.
+              Kursänderungen werden 24h im Voraus kommuniziert. Max. 8 Teilnehmer pro Kurs.
             </p>
             <Button href="/contact" variant="outline">
               Platz reservieren

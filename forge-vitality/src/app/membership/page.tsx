@@ -9,8 +9,7 @@ export const metadata: Metadata = {
 };
 
 const optionalModules = [
-  { name: "Technikkurse & S&C", price: "+ 10 €/Monat", detail: "Kettlebell · Bodyweight · Barbell · S&C Sessions" },
-  { name: "10er Karte Technikkurse", price: "80,00 €", detail: "10 Einheiten · frei einlösbar" },
+  { name: "Hybrid Fitness Kurse", price: "+ 10 €/Monat", detail: "Strength · Conditioning Sessions" },
   { name: "10er Karte Hybridkurse", price: "150,00 €", detail: "10 Einheiten · frei einlösbar" },
   { name: "Personal Training", price: "auf Anfrage", detail: "Individuell buchbar" },
   { name: "Athletiktraining", price: "auf Anfrage", detail: "Für Vereine & Einzelsportler" },
@@ -19,7 +18,7 @@ const optionalModules = [
 
 const faqs = [
   { q: "Wie funktioniert der Smart Gym Zugang?", a: "Der Zugang erfolgt per Face-ID. Du kannst das Smart Gym täglich von 05:00 bis 23:00 Uhr eigenverantwortlich nutzen — 365 Tage im Jahr. Das Studio ist videoüberwacht." },
-  { q: "Was ist der Unterschied zwischen Smart Gym und Hybrid Fitness?", a: "Das Smart Gym ist eigenverantwortliches Gerätetraining mit PRECOR Geräten. Hybrid Fitness erweitert deine Mitgliedschaft um Technikkurse, Strength & Conditioning Sessions, Trainingsplanung und Zugang zur ELEIKO Functional Area." },
+  { q: "Was ist der Unterschied zwischen Smart Gym und Hybrid Fitness?", a: "Das Smart Gym ist eigenverantwortliches Gerätetraining mit PRECOR Geräten. Hybrid Fitness erweitert deine Mitgliedschaft um Strength & Conditioning Sessions, Trainingsplanung und Zugang zur ELEIKO Functional Area." },
   { q: "Bekomme ich einen Trainingsplan?", a: "Im Hybrid Fitness Paket erhältst du alle 3 Monate einen individuellen Trainingsplan. Im Smart Gym trainierst du eigenverantwortlich." },
   { q: "Gibt es Personal Training?", a: "Ja. Personal Training mit Erik Brückner ist als Zusatzleistung auf Anfrage verfügbar — unabhängig von deiner Mitgliedschaft. Angebote: Techniktraining, Hybrid Fitness Coaching, Smart Gym Training, Sportspezifisches Athletiktraining." },
   { q: "Für welche Altersgruppe ist The Forge geeignet?", a: "The Forge ist für Menschen von 18 bis 80 Jahren konzipiert — Alltagsathleten, Vereinssportler und Freizeitsportler. Unter 18 benötigen wir eine Einverständniserklärung eines Erziehungsberechtigten." },
@@ -32,7 +31,7 @@ export default function MembershipPage() {
       <PageHero
         label="Mitgliedschaft"
         title={<>Smart Gym.<br /><span className="text-[#c19255]">Hybrid Fitness.</span></>}
-        subtitle="Das Smart Gym ist in jeder Mitgliedschaft enthalten. Hybrid Fitness erweitert dein Training um Technikkurse, S&C und Trainingsplanung."
+        subtitle="Das Smart Gym ist in jeder Mitgliedschaft enthalten. Hybrid Fitness erweitert dein Training um Strength & Conditioning Kurse und Trainingsplanung."
       />
 
       {/* Plans */}

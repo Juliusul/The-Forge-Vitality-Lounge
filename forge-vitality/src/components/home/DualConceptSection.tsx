@@ -59,15 +59,15 @@ export default function DualConceptSection() {
               className="text-[#8a8a82] text-[13px] leading-[1.85] font-light mb-10 max-w-md"
               style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 300 }}
             >
-              Kraft- &amp; Konditionstraining mit Langhantel, Kettlebell und
-              Eigenkörpergewicht. Technikkurse für den Einstieg, Strength &amp;
-              Conditioning für Fortgeschrittene. Kleine Gruppen, klare Struktur.
+              Strength-Kurse rund um die Langhantel und Conditioning Workouts
+              mit gemischten Modalitäten — Circuit, AMRAP, EMOM.
+              Kleine Gruppen, klare Struktur.
             </p>
 
             <div className="flex flex-col gap-3 mb-10">
               {[
                 "Kleine Gruppen (max. 8 Teilnehmer)",
-                "Technikkurse & Strength Sessions",
+                "Strength & Conditioning Kurse",
                 "Langhantel · Kettlebell · Bodyweight",
                 "Hoher Übertrag auf Alltag & Sport",
               ].map((item) => (
